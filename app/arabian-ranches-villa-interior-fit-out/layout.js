@@ -1,7 +1,7 @@
 import '../globals.css';
 
 export const metadata = {
-  title: " JumeiArabian Ranches Villa interior fit-out Dubai",
+  title: "Arabian Ranches Villa interior fit-out Dubai",
   description:
     " Arabian Ranches Villa interior fit-out in Dubai with bespoke fit-out & modern styles. Book your design today!",
   metadataBase: new URL('https://radyinterior.ae/'),

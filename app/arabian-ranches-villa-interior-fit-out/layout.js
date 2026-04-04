@@ -1,12 +1,12 @@
 import '../globals.css';
 
 export const metadata = {
-  title: "Arabian Ranches Villa Interior Fit Out | RadyInterior",
+  title: " JumeiArabian Ranches Villa interior fit-out Dubai",
   description:
-    "Royal Atlantis 2-bedroom apartment interior design in Dubai with bespoke fit-out & modern styles. Book your design today!",
-  metadataBase: new URL('https://wedointerior.ae/'),
+    " Arabian Ranches Villa interior fit-out in Dubai with bespoke fit-out & modern styles. Book your design today!",
+  metadataBase: new URL('https://radyinterior.ae/'),
   alternates: {
-    canonical: '/royal-atlantis-2-bedroom-apartment',
+    canonical: '/arabian-ranches-villa-interior-fit-out',
   },
 };
 

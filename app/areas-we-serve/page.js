@@ -26,7 +26,7 @@ export default function ProjectsPage() {
     </main>
   );
 }
-=======
+
 import Navbar from "@/Componenets/Navbar";
 import CallButton from "@/Componenets/CallButton";
 import WhatsAppButton from "@/Componenets/WhatsAppButton";
@@ -55,4 +55,4 @@ export default function ProjectsPage() {
     </main>
   );
 }
->>>>>>> 63d8315699495e243aed1d357ff2faa1633c0984
+

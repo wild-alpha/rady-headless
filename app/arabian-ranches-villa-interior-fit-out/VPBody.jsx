@@ -255,7 +255,6 @@ const VPBody = () => {
           </button>
         </div>
       )}
-
     </section>
   );
 };

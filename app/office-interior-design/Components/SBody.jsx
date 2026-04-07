@@ -6,13 +6,13 @@ import { useState } from "react";
 import { FaPlay } from "react-icons/fa";
 
 const designImages = [
-  "/images/vservice1.webp",
-  "/images/vservice2.webp",
-  "/images/vservice3.webp",
+  "/images/office-working-desk-dubai.jpg",
+  "/images/reception-interior-office.jpg",
+  "/images/shajrah-american-interionational-office.jpg",
 ];
 
 const textImage = {
-  src: "/images/vservice1.webp",
+  src: "/images/conference-room-interior.tif",
   link: "/villa-damac-hills-5-bedroom",
   title: "Damac Hills Villa",
 };
@@ -23,59 +23,34 @@ const galleryImages = [
     link: "/classic-villa-interior-design",
     title: "CLASSIC VILLA INTERIOR DESIGN",
   },
-  { src: "/images/vservice3.webp", link: "/villa-lantana", title: "VILLA LATANA" },
-  { src: "/images/vservice1.webp", link: "/villa-khawaneej", title: "VILLA KHAWANEEJ" },
   {
-    src: "/images/vservice1.webp",
-    link: "/emirates-hills-villa",
-    title: "EMIRATES HILLS VILLA",
+    src: "/images/vservice2.webp",
+    link: "/classic-villa-interior-design",
+    title: "CLASSIC VILLA INTERIOR DESIGN",
   },
-  { src: "/images/vservice2.webp", link: "/mbr-city-villa", title: "MBR CITY VILLA" },
   {
-    src: "/images/vservice3.webp",
-    link: "/palm-jumeirah-villa",
-    title: "PALM JUMEIRAH VILLA",
+    src: "/images/vservice2.webp",
+    link: "/classic-villa-interior-design",
+    title: "CLASSIC VILLA INTERIOR DESIGN",
   },
+  {
+    src: "/images/vservice2.webp",
+    link: "/classic-villa-interior-design",
+    title: "CLASSIC VILLA INTERIOR DESIGN",
+  },
+  {
+    src: "/images/vservice2.webp",
+    link: "/classic-villa-interior-design",
+    title: "CLASSIC VILLA INTERIOR DESIGN",
+  },
+  {
+    src: "/images/vservice2.webp",
+    link: "/classic-villa-interior-design",
+    title: "CLASSIC VILLA INTERIOR DESIGN",
+  },
+
 ];
 
-const villaSteps = [
-  {
-    id: "01",
-    title: "Initial Consultation & Design Brief",
-    desc: "We begin with a detailed consultation to understand your business type, team requirements, workflow, office style preferences, branding goals, and budget. This helps us shape an office interior concept that feels professional, functional, and aligned with your company identity.",
-    img: "/images/mission.webp",
-  },
-  {
-    id: "02",
-    title: "Site Study & Space Planning",
-    desc: "Our team studies the office layout, circulation, workstation needs, meeting room requirements, reception positioning, storage opportunities, and staff movement. We then prepare a space plan that improves productivity, comfort, and efficient use of the workplace.",
-    img: "/images/material.webp",
-  },
-  {
-    id: "03",
-    title: "Material, Furniture & Finish Selection",
-    desc: "We help you choose flooring, wall finishes, office furniture, lighting, partitions, reception counters, storage solutions, and decorative elements that match your office style while ensuring durability, functionality, and a professional appearance.",
-    img: "/images/customized.webp",
-  },
-  {
-    id: "04",
-    title: "Technical Drawings & Design Detailing",
-    desc: "Our designers and technical team prepare office layouts, reflected ceiling plans, lighting drawings, joinery details, workstation plans, and other technical documents required for accurate planning and smooth execution.",
-    img: "/images/mission.webp",
-  },
-  {
-    id: "05",
-    title: "Fit-Out Execution & Installation",
-    desc: "Once the design is finalized, our craftsmen and project team begin the transformation. From partitions and ceilings to furniture placement, lighting, joinery, and finishing details, every element is executed with precision and care.",
-    img: "/images/material.webp",
-  },
-  {
-    id: "06",
-    title: "Final Styling & Handover",
-    desc: "Before handover, we complete final checks, finishing touches, furniture arrangement, accessory placement, and quality review so your office feels polished, functional, and ready for daily business operations.",
-    img: "/images/customized.webp",
-  },
-];
 
 const faqs = [
   {
@@ -116,7 +91,7 @@ const SBody = () => {
           <div className="flex flex-col lg:flex-row gap-12">
             <div className="w-full lg:w-1/2 flex flex-col justify-start">
               <h2 className="text-sm sm:text-xl md:text-xl font-bold tracking-widest py-2 text-[#d4af37]">
-                Premium office interior design services in Dubai
+             office interior design services
               </h2>
 
               <p className="text-sm sm:text-base leading-7 mb-4">
@@ -170,7 +145,7 @@ const SBody = () => {
                   onClick={() => setVideoLoaded(true)}
                 >
                   <Image
-                    src="/images/villa-cover.webp"
+                    src="/images/office-interior-fish-tech.jpg"
                     alt="Watch our company video"
                     width={1280}
                     height={720}
@@ -184,15 +159,15 @@ const SBody = () => {
                 </div>
               ) : (
                 <div className="w-full aspect-video border-4 border-[#8c6b1f] rounded-lg overflow-hidden">
-                  <iframe
-                    className="w-full h-full"
-                    src="https://www.youtube.com/embed/F1tjU-4YMmg?autoplay=1&rel=0&modestbranding=1&controls=1"
-                    title="YouTube Shorts Video"
-                    frameBorder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    allowFullScreen
-                  ></iframe>
-                </div>
+  <iframe
+    className="w-full h-full"
+    src="https://www.youtube.com/embed/gxgwwTlKx18"
+    title="YouTube Video"
+    frameBorder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    allowFullScreen
+  ></iframe>
+</div>
               )}
 
               <Link
@@ -363,11 +338,7 @@ const SBody = () => {
               to create office interiors that feel professional, practical, and
               visually refined while supporting the real needs of the business.
             </p>
-            <p className="text-sm sm:text-base">
-              From compact offices to larger corporate workplaces, our work
-              focuses on efficiency, comfort, brand presence, and premium finishing
-              suited to modern business environments in Dubai.
-            </p>
+            
           </div>
 
           <div className="w-full lg:w-1/3 group relative overflow-hidden rounded-lg shadow-lg">
@@ -387,7 +358,8 @@ const SBody = () => {
             </a>
           </div>
         </div>
-
+            <h2 className="text-center text-xs sm:text-xl md:text-xl font-bold tracking-widest mb-6 uppercase text-[#d4af37]">
+      OUR OFFICE INTERIOR DESIGN PROJECTS IN DUBAI</h2>
         <div className="lg:max-w-[60%] grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 max-w-6xl mx-auto mb-10">
           {galleryImages.map(({ src, link, title }, i) => (
             <a
@@ -438,47 +410,7 @@ const SBody = () => {
           </div>
         </div>
 
-        <div className="bg-[#141517] py-16 mt-10">
-          <div className="max-w-6xl mx-auto text-center px-4">
-            <h2 className="text-xl sm:text-2xl md:text-3xl font-conthrax mb-2 text-[#d4af37]">
-              6-Step Process For Our Office Interior Design Services In Dubai
-            </h2>
-            <p className="font-play text-sm sm:text-base max-w-2xl mx-auto">
-              We follow a clear and transparent 6-step process to deliver
-              well-planned office interior design services in Dubai.
-            </p>
-
-            <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-12 place-items-center">
-              {villaSteps.map((step) => (
-                <div
-                  key={step.id}
-                  className="flex flex-col items-center text-center font-play"
-                >
-                  <div className="relative w-44 h-44 sm:w-48 sm:h-48 md:w-52 md:h-52 rounded-full border-[6px] border-[#8c6b1f] overflow-hidden flex items-center justify-center shadow-md bg-white">
-                    <Image
-                      src={step.img}
-                      alt={step.title}
-                      fill
-                      className="object-cover"
-                    />
-                    <div className="absolute inset-0 bg-black/30" />
-                    <span className="relative text-3xl sm:text-4xl font-conthrax text-white drop-shadow-lg">
-                      {step.id}
-                    </span>
-                  </div>
-
-                  <h3 className="mt-6 text-base sm:text-lg font-conthrax text-[#d4af37]">
-                    {step.title}
-                  </h3>
-
-                  <p className="mt-3 text-sm sm:text-base leading-relaxed max-w-xs">
-                    {step.desc}
-                  </p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
+       
 
         <div className="max-w-7xl mx-auto">
           <h2 className="text-center text-3xl font-conthrax py-12 text-[#d4af37]">
@@ -554,7 +486,7 @@ const SBody = () => {
 
             <div className="rounded-lg overflow-hidden shadow-md">
               <Image
-                src="/images/vservice1.webp"
+                src="/images/executive-office-interior.tif"
                 alt="Round luxury bed with fairy lights"
                 width={600}
                 height={400}

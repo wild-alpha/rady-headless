@@ -6,7 +6,7 @@ import { useState } from "react";
 import { FaPlay } from "react-icons/fa";
 
 const designImages = [
-  "/images/vservice1.webp",
+  "/images/asd1.jpg",
   "/images/vservice2.webp",
   "/images/vservice3.webp",
 ];

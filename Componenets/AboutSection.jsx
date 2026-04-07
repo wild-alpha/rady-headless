@@ -11,7 +11,7 @@ const cards = [
     image: "/images/1.webp",
     imageAlt: "Luxury interior living room",
     buttons: [
-      { label: "OUR PROJECTS", href: "/projects", filled: true },
+      { label: "OUR PROJECTS", href: "/gallery", filled: true },
       { label: "FREE CONSULTATION", href: "/contact", filled: false },
     ],
     reverse: false,
@@ -32,7 +32,7 @@ const cards = [
     image: "/images/2.webp",
     imageAlt: "Modern commercial office interior",
     buttons: [
-      { label: "OUR PROJECTS", href: "/projects", filled: true },
+      { label: "OUR PROJECTS", href: "/gallery", filled: true },
       { label: "FREE CONSULTATION", href: "/contact", filled: false },
     ],
     reverse: false,
@@ -102,40 +102,21 @@ export default function AboutSection() {
   return (
     <section className="bg-black text-white">
       <div className="mx-auto max-w-[1920px] px-4 py-10 sm:px-6 sm:py-14 lg:px-8 lg:py-16 xl:px-10 2xl:px-16">
-        <div className="mx-auto max-w-[980px] text-center">
+        <div className="mx-auto max-w-[1000px] text-center">
           <h2 className="font-khand font-semibold text-[20px] leading-[1.1] text-white sm:text-[26px] lg:text-[32px]">
             Top Interior Designers &amp; Fit Out
             Specialists In Dubai
           </h2>
 
-          <div className="mt-5 space-y-4 font-roboto text-[13px] leading-[1.9] text-white sm:text-[13px] lg:text-[14px]">
+          <div className="mt-5 space-y-4 font-roboto text-13px] leading-[1.9] text-white sm:text-[30px] lg:text-[15px]">
             <p>
-              RadyInterior is a luxury interior design and fit-out company in
-              Dubai delivering villa renovations, corporate offices, retail fit
-              outs, F&amp;B concepts, and high-end residential projects. We
-              manage the full journey space planning, 3D visualization,
-              authority approvals, construction, joinery, MEP integration, and
-              turnkey handover. Our in-house team manages the entire process.
-              Every project is approached with a consultant led mindset,
-              combining design intelligence, material expertise, and disciplined
-              project management.
+              Rady Interior Design & Fit-out is a leading interior design Dubai company which is offering its high-end interior fit out services Across UAE. As a luxury interior design company our services cover commercial, residential and hospitality projects most prominently in Dubai and Sharjah.  With over 15 years of experience and 170+ successful projects, our staff and team specialized in  MEP solutions, carpentry and joinery, landscape design and Villa construction services in Dubai.
             </p>
 
             <p>
-              With offices in Dubai and Sharjah, RadyInterior serves clients
-              across the UAE, delivering luxury interiors that are functional,
-              refined, and built to perform. Whether you&apos;re planning a full
-              villa renovation, a corporate office fit out, or a high end
-              commercial space, we provide a seamless end to end solution
-              aligned with your vision and budget.
+              Standing among the best interior design companies in Dubai, Rady interior Design & Fit-out has worked with several offices in Business Bay, villas in  Palm Jumeirah and residences in Emirates Hills bringing technology and aesthetics together. We blend our creativity, technical expertise and project management skills in such a good way that our spaces reflect the visions and design standards of our clients.
             </p>
-
             <div>
-              <p>Our philosophy is simple</p>
-              <p>
-                Every space should feel elevated, functional, and deeply
-                personal.
-              </p>
             </div>
           </div>
 

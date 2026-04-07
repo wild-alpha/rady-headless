@@ -9,7 +9,7 @@ const Hero = () => {
     <div className="relative w-full h-[400px] md:h-[500px] lg:h-[650px] overflow-hidden">
       {/* Background Image */}
       <Image
-        src="/images/prayer-room-renovation.jpg"
+        src="/images/prayer-room-interior-design.jpeg"
         alt="interior design"
         width={1920}
         height={1080}
@@ -37,14 +37,12 @@ const Hero = () => {
   "
 >
   <p className="text-sm md:text-lg font-play mb-2 opacity-90">
-    One at the land of UAE
+    Inspired by Dubai, Designed for You
   </p>
 
-  <h1 className="text-xl md:text-3xl lg:text-5xl font-conthrax leading-snug mb-4">
-    PRAYER ROOM <br />
-    INTERIOR <span className="">DESIGN</span> <br />
+  <h1 className="text-xl md:text-3xl lg:text-3xl  font-semibold font-conthrax leading-snug mb-4">
+    PRAYER ROOM INTERIOR DESIGN <br /> DUBAI, UAE
   </h1>
-
   <p className="text-xs md:text-sm font-play mb-6 opacity-90">
     Experience the Perfect Blend of <br />
     Creativity and Functionality with Us

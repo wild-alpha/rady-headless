@@ -1,7 +1,8 @@
 import "./globals.css";
 
 export const metadata = {
-  title: "Rady Interior",
+  title: "Interior Design Dubai - Luxury Interior Fit Out Company, UAE",
+  description: "Luxury interior design and fit-out company in Dubai & Sharjah. Villas, offices, retail, hospitality and turnkey execution across the UAE.",
 };
 
 export default function RootLayout({ children }) {

@@ -1,7 +1,7 @@
 import '../globals.css';
 
 export const metadata = {
-  title: "Best Interior Design Company in Business Bay, Dubai - WE DO interiors",
+  title: "Best Interior Design Company in Business Bay, Dubai - RadyInteriors",
   description:
     "Luxury interior design company in Business Bay delivering office, apartment & turnkey fit-outs. Schedule your free consultation today.",
   keywords:[

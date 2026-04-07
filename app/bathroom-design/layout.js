@@ -4,7 +4,7 @@ export const metadata = {
   title: "Bathroom Interior Design UAE - Modern Interior Design",
   description:
     "Bathroom interior design in Dubai by Rady Interior. Modern, classic, or creative styles, beautiful spaces made for you. Call now to start your project!",
-  metadataBase: new URL('https://www.casakraftinteriors.ae/'),
+  metadataBase: new URL('https://radyinterior.ae/'),
   alternates: {
     canonical: '/bathroom-design',
   },

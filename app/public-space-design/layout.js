@@ -1,12 +1,12 @@
 import '../globals.css';
 
 export const metadata = {
-  title: "Villa Interior Design Dubai - Modern Interior Design",
+  title: "Public Space Design Dubai - RadyInteriors",
   description:
-    "Luxury villa  interior design in Dubai by WE DO. Modern, classic, or creative styles, beautiful spaces made for you. Call now to start your project!",
-  metadataBase: new URL('https://www.casakraftinteriors.ae/'),
+    "Public Space Design Dubai by RadyInteriors. Modern, classic, or creative styles, beautiful spaces made for you. Call now to start your project!",
+  metadataBase: new URL('https://radyinterior.ae/'),
   alternates: {
-    canonical: '/villa-interior-design-dubai',
+    canonical: '/public-space-design',
   },
 };
 

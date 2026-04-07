@@ -11,17 +11,17 @@ import {
 } from "react-icons/fa";
 
 const socialLinks = [
-  { icon: FaFacebookF, href: "#", label: "Facebook" },
-  { icon: FaInstagram, href: "#", label: "Instagram" },
-  { icon: FaYoutube, href: "#", label: "YouTube" },
-  { icon: FaLinkedinIn, href: "#", label: "LinkedIn" },
-  { icon: FaPinterestP, href: "#", label: "Pinterest" },
+  { icon: FaFacebookF, href: "https://www.facebook.com/rady.interior/", label: "Facebook" },
+  { icon: FaInstagram, href: "https://www.instagram.com/rady.interior/", label: "Instagram" },
+  { icon: FaYoutube, href: "https://www.youtube.com/@RadyInterior", label: "YouTube" },
+  { icon: FaLinkedinIn, href: "https://www.linkedin.com/company/rady-interior/?originalSubdomain=ae", label: "LinkedIn" },
+  { icon: FaPinterestP, href: "https://www.pinterest.com/radyinterior/", label: "Pinterest" },
 ];
 
 const importantLinks = [
   { name: "About us", href: "/about" },
   { name: "Our Services", href: "/services" },
-  { name: "Portfolio", href: "/portfolio" },
+  { name: "Portfolio", href: "/gallery" },
   { name: "Design Works", href: "/design-works" },
   { name: "Testimonials", href: "/testimonials" },
   { name: "Careers", href: "/careers" },
@@ -31,11 +31,11 @@ const importantLinks = [
 const serviceLocations = [
   { name: "Dubai", href: "/areas-we-serve/dubai" },
   { name: "Sharjah", href: "/areas-we-serve/sharjah" },
-  { name: "Ajman", href: "/areas-we-serve/ajman" },
+  { name: "Ajman", href: "/areas-we-serve/interior-design-company-ajman" },
   { name: "Abu Dhabi", href: "/areas-we-serve/abu-dhabi" },
-  { name: "Umm Al Quwain", href: "/areas-we-serve/umm-al-quwain" },
-  { name: "Ras Al Khaimah", href: "/areas-we-serve/ras-al-khaimah" },
-  { name: "Al Ain", href: "/areas-we-serve/al-ain" },
+  { name: "Umm Al Quwain", href: "/areas-we-serve/interior-design-umm-al-quwain" },
+  { name: "Ras Al Khaimah", href: "/areas-we-serve/interior-design-ras-al-khaimah" },
+  { name: "Fujairah", href: "/areas-we-serve/interior-design-company-fujairah" },
 ];
 
 export default function Footer() {

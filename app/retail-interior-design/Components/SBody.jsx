@@ -6,15 +6,15 @@ import { useState } from "react";
 import { FaPlay } from "react-icons/fa";
 
 const designImages = [
-  "/images/vservice1.webp",
-  "/images/vservice2.webp",
-  "/images/vservice3.webp",
+  "/images/clothing-retail-design.jpg",
+  "/images/clothing-store-retail-interior.webp",
+  "/images/shoe-store-retail-interior.jpg",
 ];
 
 const textImage = {
-  src: "/images/vservice1.webp",
+  src: "/images/retail-interiors-in-dubai.webp",
   link: "/villa-damac-hills-5-bedroom",
-  title: "Damac Hills Villa",
+  title: "Retail Interior Design",
 };
 
 const galleryImages = [
@@ -23,59 +23,33 @@ const galleryImages = [
     link: "/classic-villa-interior-design",
     title: "CLASSIC VILLA INTERIOR DESIGN",
   },
-  { src: "/images/vservice3.webp", link: "/villa-lantana", title: "VILLA LATANA" },
-  { src: "/images/vservice1.webp", link: "/villa-khawaneej", title: "VILLA KHAWANEEJ" },
   {
-    src: "/images/vservice1.webp",
-    link: "/emirates-hills-villa",
-    title: "EMIRATES HILLS VILLA",
+    src: "/images/vservice2.webp",
+    link: "/classic-villa-interior-design",
+    title: "CLASSIC VILLA INTERIOR DESIGN",
   },
-  { src: "/images/vservice2.webp", link: "/mbr-city-villa", title: "MBR CITY VILLA" },
   {
-    src: "/images/vservice3.webp",
-    link: "/palm-jumeirah-villa",
-    title: "PALM JUMEIRAH VILLA",
+    src: "/images/vservice2.webp",
+    link: "/classic-villa-interior-design",
+    title: "CLASSIC VILLA INTERIOR DESIGN",
+  },
+  {
+    src: "/images/vservice2.webp",
+    link: "/classic-villa-interior-design",
+    title: "CLASSIC VILLA INTERIOR DESIGN",
+  },
+  {
+    src: "/images/vservice2.webp",
+    link: "/classic-villa-interior-design",
+    title: "CLASSIC VILLA INTERIOR DESIGN",
+  },
+  {
+    src: "/images/vservice2.webp",
+    link: "/classic-villa-interior-design",
+    title: "CLASSIC VILLA INTERIOR DESIGN",
   },
 ];
 
-const villaSteps = [
-  {
-    id: "01",
-    title: "Initial Consultation & Design Brief",
-    desc: "We begin with a detailed consultation to understand your retail concept, target audience, product category, brand identity, display needs, customer journey, and budget. This helps us shape a retail interior concept that feels attractive, practical, and aligned with your store vision.",
-    img: "/images/mission.webp",
-  },
-  {
-    id: "02",
-    title: "Site Study & Space Planning",
-    desc: "Our team studies the store layout, entrance visibility, customer circulation, display zones, cashier position, storage opportunities, and staff movement. We then prepare a space plan that improves shopping flow, product visibility, and efficient store use.",
-    img: "/images/material.webp",
-  },
-  {
-    id: "03",
-    title: "Material, Fixture & Finish Selection",
-    desc: "We help you choose flooring, wall finishes, shelving, display fixtures, counters, lighting, ceiling treatments, and decorative elements that match your retail identity while ensuring durability, functionality, and a strong visual impression.",
-    img: "/images/customized.webp",
-  },
-  {
-    id: "04",
-    title: "Technical Drawings & Design Detailing",
-    desc: "Our designers and technical team prepare retail layouts, reflected ceiling plans, lighting drawings, joinery details, display fixture plans, and other technical documents required for accurate planning and smooth execution.",
-    img: "/images/mission.webp",
-  },
-  {
-    id: "05",
-    title: "Fit-Out Execution & Installation",
-    desc: "Once the design is finalized, our craftsmen and project team begin the transformation. From flooring and partitions to shelving, counters, lighting, signage details, and decorative elements, every part is executed with precision and care.",
-    img: "/images/material.webp",
-  },
-  {
-    id: "06",
-    title: "Final Styling & Handover",
-    desc: "Before handover, we complete final checks, finishing touches, display alignment, accessory placement, cleaning, and quality review so your retail interior feels polished, functional, and ready to welcome customers.",
-    img: "/images/customized.webp",
-  },
-];
 
 const faqs = [
   {
@@ -171,7 +145,7 @@ const SBody = () => {
                   onClick={() => setVideoLoaded(true)}
                 >
                   <Image
-                    src="/images/villa-cover.webp"
+                    src="/images/clothing-store-retail-interior.webp"
                     alt="Watch our company video"
                     width={1280}
                     height={720}
@@ -355,22 +329,7 @@ const SBody = () => {
               movement, entrance impact, product display, cashier positioning,
               lighting, branding, and the overall shopping atmosphere.
             </p>
-            <p className="text-sm sm:text-base">
-              Clients trust
-              <a
-                href="https://radyinterior.ae/"
-                className="ml-1"
-              >
-                Rady Interior Design & Fit Out <span></span>
-              </a>
-              to create retail interiors that feel distinctive, practical, and
-              visually refined while supporting daily commercial operations.
-            </p>
-            <p className="text-sm sm:text-base">
-              From compact boutiques to larger branded retail spaces, our work
-              focuses on customer experience, visual merchandising, and premium
-              finishing suited to Dubai’s competitive retail market.
-            </p>
+           
           </div>
 
           <div className="w-full lg:w-1/3 group relative overflow-hidden rounded-lg shadow-lg">
@@ -418,7 +377,7 @@ const SBody = () => {
           <h3 className="text-xs sm:text-xl font-conthrax uppercase text-[#d4af37]">
             Get In Touch With Us
           </h3>
-          <p className="text-sm sm:text-base font-play">
+          <p className="text-sm text-black sm:text-base font-play">
             We are located in the world's luxury city, Dubai
           </p>
 
@@ -441,48 +400,7 @@ const SBody = () => {
           </div>
         </div>
 
-        <div className="bg-[#141517] py-16 mt-10">
-          <div className="max-w-6xl mx-auto text-center px-4">
-            <h2 className="text-xl sm:text-2xl md:text-3xl font-conthrax mb-2 text-[#d4af37]">
-              6-Step Process For Our Retail Interior Design Services In Dubai
-            </h2>
-            <p className="font-play text-sm sm:text-base max-w-2xl mx-auto">
-              We follow a clear and transparent 6-step process to deliver
-              well-planned retail interior design services in Dubai.
-            </p>
-
-            <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-12 place-items-center">
-              {villaSteps.map((step) => (
-                <div
-                  key={step.id}
-                  className="flex flex-col items-center text-center font-play"
-                >
-                  <div className="relative w-44 h-44 sm:w-48 sm:h-48 md:w-52 md:h-52 rounded-full border-[6px] border-[#8c6b1f] overflow-hidden flex items-center justify-center shadow-md bg-white">
-                    <Image
-                      src={step.img}
-                      alt={step.title}
-                      fill
-                      className="object-cover"
-                    />
-                    <div className="absolute inset-0 bg-black/30" />
-                    <span className="relative text-3xl sm:text-4xl font-conthrax text-white drop-shadow-lg">
-                      {step.id}
-                    </span>
-                  </div>
-
-                  <h3 className="mt-6 text-base sm:text-lg font-conthrax text-[#d4af37]">
-                    {step.title}
-                  </h3>
-
-                  <p className="mt-3 text-sm sm:text-base leading-relaxed max-w-xs">
-                    {step.desc}
-                  </p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-
+      
         <div className="max-w-7xl mx-auto">
           <h2 className="text-center text-3xl font-conthrax py-12 text-[#d4af37]">
             Bespoke Retail Interior Design Dubai, Crafted for Shopping Experience and Brand Identity

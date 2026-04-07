@@ -6,13 +6,13 @@ import { useState } from "react";
 import { FaPlay } from "react-icons/fa";
 
 const designImages = [
-  "/images/vservice1.webp",
-  "/images/vservice2.webp",
-  "/images/vservice3.webp",
+  "/images/Untitled-1.jpg",
+  "/images/Untitled-4-.jpg",
+  "/images/Untitled-6.jpg",
 ];
 
 const textImage = {
-  src: "/images/vservice1.webp",
+  src: "/images/2 (2).jpg",
   link: "/villa-damac-hills-5-bedroom",
   title: "Damac Hills Villa",
 };
@@ -23,59 +23,34 @@ const galleryImages = [
     link: "/classic-villa-interior-design",
     title: "CLASSIC VILLA INTERIOR DESIGN",
   },
-  { src: "/images/vservice3.webp", link: "/villa-lantana", title: "VILLA LATANA" },
-  { src: "/images/vservice1.webp", link: "/villa-khawaneej", title: "VILLA KHAWANEEJ" },
   {
-    src: "/images/vservice1.webp",
-    link: "/emirates-hills-villa",
-    title: "EMIRATES HILLS VILLA",
+    src: "/images/vservice2.webp",
+    link: "/classic-villa-interior-design",
+    title: "CLASSIC VILLA INTERIOR DESIGN",
   },
-  { src: "/images/vservice2.webp", link: "/mbr-city-villa", title: "MBR CITY VILLA" },
   {
-    src: "/images/vservice3.webp",
-    link: "/palm-jumeirah-villa",
-    title: "PALM JUMEIRAH VILLA",
+    src: "/images/vservice2.webp",
+    link: "/classic-villa-interior-design",
+    title: "CLASSIC VILLA INTERIOR DESIGN",
+  },
+  {
+    src: "/images/vservice2.webp",
+    link: "/classic-villa-interior-design",
+    title: "CLASSIC VILLA INTERIOR DESIGN",
+  },
+  {
+    src: "/images/vservice2.webp",
+    link: "/classic-villa-interior-design",
+    title: "CLASSIC VILLA INTERIOR DESIGN",
+  },
+  {
+    src: "/images/vservice2.webp",
+    link: "/classic-villa-interior-design",
+    title: "CLASSIC VILLA INTERIOR DESIGN",
   },
 ];
 
-const villaSteps = [
-  {
-    id: "01",
-    title: "Initial Consultation & Design Brief",
-    desc: "We begin with a detailed consultation to understand your living room needs, lifestyle, seating preferences, entertainment habits, design taste, and budget. This helps us shape a living room concept that feels elegant, functional, and personalized.",
-    img: "/images/mission.webp",
-  },
-  {
-    id: "02",
-    title: "Site Study & Space Planning",
-    desc: "Our team studies the living room layout, circulation, natural light, focal points, seating arrangement, TV or feature wall positioning, and available space. We then prepare a layout plan that improves comfort, visual balance, and daily usability.",
-    img: "/images/material.webp",
-  },
-  {
-    id: "03",
-    title: "Material, Furniture & Finish Selection",
-    desc: "We help you choose sofas, coffee tables, rugs, curtains, wall finishes, lighting, decorative elements, and other materials that match your design style while ensuring comfort, durability, and a refined look.",
-    img: "/images/customized.webp",
-  },
-  {
-    id: "04",
-    title: "Technical Drawings & Design Detailing",
-    desc: "Our designers and technical team prepare living room layouts, ceiling plans, feature wall details, lighting layouts, joinery drawings, and other documents required for accurate planning and smooth execution.",
-    img: "/images/mission.webp",
-  },
-  {
-    id: "05",
-    title: "Fit-Out Execution & Installation",
-    desc: "Once the design is finalized, our craftsmen and project team begin the transformation. From wall finishes and custom joinery to furniture placement, lighting, and decorative detailing, every element is executed with care.",
-    img: "/images/material.webp",
-  },
-  {
-    id: "06",
-    title: "Final Styling & Handover",
-    desc: "Before handover, we complete final styling, finishing checks, furniture arrangement, accessory placement, and quality review so your living room feels polished, welcoming, and ready for everyday living and entertaining.",
-    img: "/images/customized.webp",
-  },
-];
+
 
 const faqs = [
   {
@@ -116,7 +91,7 @@ const SBody = () => {
           <div className="flex flex-col lg:flex-row gap-12">
             <div className="w-full lg:w-1/2 flex flex-col justify-start">
               <h2 className="text-sm sm:text-xl md:text-xl font-bold tracking-widest py-2 text-[#d4af37]">
-                Premium living room interior design services in Dubai
+               Living room interior design services in Dubai
               </h2>
 
               <p className="text-sm sm:text-base leading-7 mb-4">
@@ -170,7 +145,7 @@ const SBody = () => {
                   onClick={() => setVideoLoaded(true)}
                 >
                   <Image
-                    src="/images/villa-cover.webp"
+                    src="/images/03.jpg"
                     alt="Watch our company video"
                     width={1280}
                     height={720}
@@ -437,47 +412,7 @@ const SBody = () => {
           </div>
         </div>
 
-        <div className="bg-[#141517] py-16 mt-10">
-          <div className="max-w-6xl mx-auto text-center px-4">
-            <h2 className="text-xl sm:text-2xl md:text-3xl font-conthrax mb-2 text-[#d4af37]">
-              6-Step Process For Our Living Room Design Services In Dubai
-            </h2>
-            <p className="font-play text-sm sm:text-base max-w-2xl mx-auto">
-              We follow a clear and transparent 6-step process to deliver
-              well-planned living room interior design services in Dubai.
-            </p>
-
-            <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-12 place-items-center">
-              {villaSteps.map((step) => (
-                <div
-                  key={step.id}
-                  className="flex flex-col items-center text-center font-play"
-                >
-                  <div className="relative w-44 h-44 sm:w-48 sm:h-48 md:w-52 md:h-52 rounded-full border-[6px] border-[#8c6b1f] overflow-hidden flex items-center justify-center shadow-md bg-white">
-                    <Image
-                      src={step.img}
-                      alt={step.title}
-                      fill
-                      className="object-cover"
-                    />
-                    <div className="absolute inset-0 bg-black/30" />
-                    <span className="relative text-3xl sm:text-4xl font-conthrax text-white drop-shadow-lg">
-                      {step.id}
-                    </span>
-                  </div>
-
-                  <h3 className="mt-6 text-base sm:text-lg font-conthrax text-[#d4af37]">
-                    {step.title}
-                  </h3>
-
-                  <p className="mt-3 text-sm sm:text-base leading-relaxed max-w-xs">
-                    {step.desc}
-                  </p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
+       
 
         <div className="max-w-7xl mx-auto">
           <h2 className="text-center text-3xl font-conthrax py-12 text-[#d4af37]">
@@ -553,7 +488,7 @@ const SBody = () => {
 
             <div className="rounded-lg overflow-hidden shadow-md">
               <Image
-                src="/images/vservice1.webp"
+                src="/images/KHALİFA AL ALİ-RECEPTİON-FRONT SİDE VİEW -06.02.jpg"
                 alt="Round luxury bed with fairy lights"
                 width={600}
                 height={400}

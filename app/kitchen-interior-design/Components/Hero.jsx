@@ -9,7 +9,7 @@ const Hero = () => {
     <div className="relative w-full h-[400px] md:h-[500px] lg:h-[650px] overflow-hidden">
       {/* Background Image */}
       <Image
-        src="/images/kitchen-design.jpg"
+        src="/images/0300.jpg"
         alt="interior design"
         width={1920}
         height={1080}

@@ -6,15 +6,15 @@ import { useState } from "react";
 import { FaPlay } from "react-icons/fa";
 
 const designImages = [
-  "/images/vservice1.webp",
-  "/images/vservice2.webp",
-  "/images/vservice3.webp",
+  "/images/palace-sofa-side-decor.jpg",
+  "/images/palace-bedroom-interior-design.jpg",
+  "/images/working-table-interior-in-palace.jpg",
 ];
 
 const textImage = {
-  src: "/images/vservice1.webp",
+  src: "/images/palace-furniture-dubai.jpg",
   link: "/villa-damac-hills-5-bedroom",
-  title: "Damac Hills Villa",
+  title: "Palace Interior Design",
 };
 
 const galleryImages = [
@@ -38,44 +38,7 @@ const galleryImages = [
   },
 ];
 
-const villaSteps = [
-  {
-    id: "01",
-    title: "Initial Consultation & Design Vision",
-    desc: "We begin with a detailed consultation to understand your palace lifestyle, cultural preferences, architectural direction, luxury expectations, hosting requirements, and design goals. This helps us define a palace interior concept that feels grand, elegant, and deeply personalized.",
-    img: "/images/mission.webp",
-  },
-  {
-    id: "02",
-    title: "Site Study & Spatial Planning",
-    desc: "Our team studies the palace layout, circulation, formal and private zones, reception areas, majlis spaces, suites, corridors, and feature areas. We then prepare a space plan that enhances flow, functionality, visual harmony, and ceremonial presence.",
-    img: "/images/material.webp",
-  },
-  {
-    id: "03",
-    title: "Material, Furniture & Finishing Selection",
-    desc: "We help you select premium materials, marble details, wall finishes, custom furniture, lighting, fabrics, decorative features, and interior elements that reflect palace-level luxury while maintaining craftsmanship, elegance, and long-term value.",
-    img: "/images/customized.webp",
-  },
-  {
-    id: "04",
-    title: "Technical Drawings & Design Detailing",
-    desc: "Our designers and technical team prepare detailed layouts, reflected ceiling plans, joinery drawings, wall elevations, lighting schemes, decorative detailing, and other technical documents required for accurate planning and flawless execution.",
-    img: "/images/mission.webp",
-  },
-  {
-    id: "05",
-    title: "Execution, Fit-Out & Installation",
-    desc: "Once the design is finalized, our craftsmen and project team begin the transformation. From architectural detailing and custom joinery to flooring, ceilings, decorative finishes, lighting, and furniture installation, every element is executed with precision and care.",
-    img: "/images/material.webp",
-  },
-  {
-    id: "06",
-    title: "Final Styling & Handover",
-    desc: "Before handover, we complete final styling, finishing checks, furniture placement, decorative accessory arrangement, and quality review so your palace interior feels polished, majestic, and ready for refined daily living and grand hospitality.",
-    img: "/images/customized.webp",
-  },
-];
+
 
 const faqs = [
   {
@@ -116,7 +79,7 @@ const SBody = () => {
           <div className="flex flex-col lg:flex-row gap-12">
             <div className="w-full lg:w-1/2 flex flex-col justify-start">
               <h2 className="text-sm sm:text-xl md:text-xl font-bold tracking-widest py-2 text-[#d4af37]">
-                Luxury palace interior design services in Dubai
+              Palace interior design Dubai
               </h2>
 
               <p className="text-sm sm:text-base leading-7 mb-4">
@@ -171,7 +134,7 @@ const SBody = () => {
                   onClick={() => setVideoLoaded(true)}
                 >
                   <Image
-                    src="/images/villa-cover.webp"
+                    src="/images/palace-sitting-area-interior.jpg"
                     alt="Watch our company video"
                     width={1280}
                     height={720}
@@ -392,30 +355,7 @@ const SBody = () => {
             </a>
           </div>
         </div>
-
-        <div className="lg:max-w-[60%] grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 max-w-6xl mx-auto mb-10">
-          {galleryImages.map(({ src, link, title }, i) => (
-            <a
-              href={link}
-              key={i}
-              className="group block relative overflow-hidden rounded shadow"
-            >
-              <Image
-                src={src}
-                alt={title}
-                width={400}
-                height={400}
-                className="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105"
-              />
-              <div className="absolute inset-0 bg-black/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                <p className="text-white text-sm sm:text-base font-conthrax text-center">
-                  {title}
-                </p>
-              </div>
-            </a>
-          ))}
-        </div>
-
+       
         <div className="w-screen ml-[calc(50%-50vw)] bg-[#f5ede5] py-10 text-center space-y-4">
           <h3 className="text-xs sm:text-xl font-conthrax uppercase text-[#d4af37]">
             Get In Touch With Us
@@ -443,47 +383,7 @@ const SBody = () => {
           </div>
         </div>
 
-        <div className="bg-[#141517] py-16 mt-10">
-          <div className="max-w-6xl mx-auto text-center px-4">
-            <h2 className="text-xl sm:text-2xl md:text-3xl font-conthrax mb-2 text-[#d4af37]">
-              6-Step Process For Our Palace Interior Design Services In Dubai
-            </h2>
-            <p className="font-play text-sm sm:text-base max-w-2xl mx-auto">
-              We follow a clear and transparent 6-step process to deliver
-              exceptional palace interior design services in Dubai.
-            </p>
-
-            <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-12 place-items-center">
-              {villaSteps.map((step) => (
-                <div
-                  key={step.id}
-                  className="flex flex-col items-center text-center font-play"
-                >
-                  <div className="relative w-44 h-44 sm:w-48 sm:h-48 md:w-52 md:h-52 rounded-full border-[6px] border-[#8c6b1f] overflow-hidden flex items-center justify-center shadow-md bg-white">
-                    <Image
-                      src={step.img}
-                      alt={step.title}
-                      fill
-                      className="object-cover"
-                    />
-                    <div className="absolute inset-0 bg-black/30" />
-                    <span className="relative text-3xl sm:text-4xl font-conthrax text-white drop-shadow-lg">
-                      {step.id}
-                    </span>
-                  </div>
-
-                  <h3 className="mt-6 text-base sm:text-lg font-conthrax text-[#d4af37]">
-                    {step.title}
-                  </h3>
-
-                  <p className="mt-3 text-sm sm:text-base leading-relaxed max-w-xs">
-                    {step.desc}
-                  </p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
+       
 
         <div className="max-w-7xl mx-auto">
           <h2 className="text-center text-3xl font-conthrax py-12 text-[#d4af37]">
@@ -560,7 +460,7 @@ const SBody = () => {
 
             <div className="rounded-lg overflow-hidden shadow-md">
               <Image
-                src="/images/vservice1.webp"
+                src="/images/palace-sitting-area-interior.jpg"
                 alt="Round luxury bed with fairy lights"
                 width={600}
                 height={400}

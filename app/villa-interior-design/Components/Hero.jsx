@@ -9,7 +9,7 @@ const Hero = () => {
     <div className="relative w-full h-[400px] md:h-[500px] lg:h-[650px] overflow-hidden">
       {/* Background Image */}
       <Image
-        src="/images/villa-design.jpg"
+        src="/images/villa-interior-design-service.jpg"
         alt="interior design"
         width={1920}
         height={1080}
@@ -37,12 +37,11 @@ const Hero = () => {
   "
 >
   <p className="text-sm md:text-lg font-play mb-2 opacity-90">
-    One at the land of Dubai
+    Inspired by Dubai, Designed for You
   </p>
 
-  <h1 className="text-xl md:text-3xl lg:text-5xl font-conthrax leading-snug mb-4">
-    VILLA INTERIOR <br />
-    DESIGN <span className="">DUBAI</span> <br />
+  <h1 className="text-xl md:text-3xl lg:text-4xl  font-semibold font-conthrax leading-snug mb-4">
+    VILLA INTERIOR DESIGN <br /> DUBAI, UAE
   </h1>
 
   <p className="text-xs md:text-sm font-play mb-6 opacity-90">

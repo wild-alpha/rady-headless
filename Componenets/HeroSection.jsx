@@ -23,24 +23,19 @@ export default function HeroSection() {
               Welcome to Radyinterior
             </p>
 
-            <h1 className="mt-6 max-w-[1000px] font-khand text-[42px] font-semibold leading-[0.95] text-white sm:text-[15px] md:text-[27px] lg:text-[42px] xl:text-[57px] 2xl:text-[88px]">
-              Interior Design Dubai - Luxury Interior Design & Fit-Out Company,
-              UAE
+            <h1 className="mt-6 max-w-[1000px] font-khand text-[40px] font-semibold leading-[1.1] text-white sm:text-[16px] md:text-[20px] lg:text-[28px] xl:text-[36px] 2xl:text-[48px]">
+            Interior Design Dubai - Luxury Interior Design & Fit-Out Company, UAE
             </h1>
 
-            <h2 className="mt-10 max-w-[1200px] font-khand text-[28px] font-medium leading-[1.08] text-white sm:text-[14px] md:text-[20px] lg:text-[26px] xl:text-[32px] 2xl:text-[54px]">
-              Premium Residential & Commercial Interior Designers In Dubai, UAE
+           <h2 className="mt-10 max-w-[1200px] font-khand text-[18px] font-medium leading-[1.1] text-white sm:text-[14px] md:text-[16px] lg:text-[20px] xl:text-[24px] 2xl:text-[32px]">Premium Residential & Commercial Interior Designers In Dubai, UAE
             </h2>
 
-            <p className="mt-8 max-w-[1150px] font-roboto text-[16px] leading-[1.8] text-white/95 sm:text-[18px] md:text-[22px] lg:text-[20px] xl:text-[15px] 2xl:text-[20px]">
-              Rady Interiors is a leading interior design company across the UAE
-              including Dubai and Sharjah, delivering premium<br></br> interior design
-              for residential and commercial spaces.
+            <p className="mt-8 max-w-[1150px] font-roboto leading-[1.6] text-white/95">
+               Rady Interiors is a leading interior design company across the UAE including Dubai and Sharjah, delivering premium<br /> interior design for residential and commercial spaces.
             </p>
-
             <div className="mt-8 md:mt-6">
             <Link
-             href="/projects"
+             href="/gallery"
               className="inline-flex items-center justify-center rounded-[8px] bg-[#e9c35f] px-8 py-3 font-roboto text-[18px] font-medium text-black transition hover:bg-[#d4af37]"
             >
               Our Projects

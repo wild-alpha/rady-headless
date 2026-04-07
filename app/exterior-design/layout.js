@@ -1,12 +1,12 @@
 import '../globals.css';
 
 export const metadata = {
-  title: "Villa Interior Design Dubai - Modern Interior Design",
+  title: "Exterior Design Dubai - Modern Exterior Design",
   description:
-    "Luxury villa  interior design in Dubai by WE DO. Modern, classic, or creative styles, beautiful spaces made for you. Call now to start your project!",
-  metadataBase: new URL('https://www.casakraftinteriors.ae/'),
+    "Exterior Design Dubai by RadyInterior. Modern, classic, or creative styles, beautiful spaces made for you. Call now to start your project!",
+  metadataBase: new URL('https://radyinterior.ae/'),
   alternates: {
-    canonical: '/villa-interior-design-dubai',
+    canonical: '/exterior-design',
   },
 };
 

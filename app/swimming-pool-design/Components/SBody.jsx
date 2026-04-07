@@ -6,76 +6,51 @@ import { useState } from "react";
 import { FaPlay } from "react-icons/fa";
 
 const designImages = [
-  "/images/vservice1.webp",
-  "/images/vservice2.webp",
-  "/images/vservice3.webp",
+  "/images/07 (1).jpg",
+  "/images/05.jpg",
+  "/images/11 (1).jpg",
 ];
 
 const textImage = {
-  src: "/images/vservice1.webp",
+  src: "/images/07 (1).jpg",
   link: "/villa-damac-hills-5-bedroom",
   title: "Damac Hills Villa",
 };
 
 const galleryImages = [
+{
+    src: "/images/vservice2.webp",
+    link: "/classic-villa-interior-design",
+    title: "CLASSIC VILLA INTERIOR DESIGN",
+  },
   {
     src: "/images/vservice2.webp",
     link: "/classic-villa-interior-design",
     title: "CLASSIC VILLA INTERIOR DESIGN",
   },
-  { src: "/images/vservice3.webp", link: "/villa-lantana", title: "VILLA LATANA" },
-  { src: "/images/vservice1.webp", link: "/villa-khawaneej", title: "VILLA KHAWANEEJ" },
   {
-    src: "/images/vservice1.webp",
-    link: "/emirates-hills-villa",
-    title: "EMIRATES HILLS VILLA",
+    src: "/images/vservice2.webp",
+    link: "/classic-villa-interior-design",
+    title: "CLASSIC VILLA INTERIOR DESIGN",
   },
-  { src: "/images/vservice2.webp", link: "/mbr-city-villa", title: "MBR CITY VILLA" },
   {
-    src: "/images/vservice3.webp",
-    link: "/palm-jumeirah-villa",
-    title: "PALM JUMEIRAH VILLA",
+    src: "/images/vservice2.webp",
+    link: "/classic-villa-interior-design",
+    title: "CLASSIC VILLA INTERIOR DESIGN",
+  },
+  {
+    src: "/images/vservice2.webp",
+    link: "/classic-villa-interior-design",
+    title: "CLASSIC VILLA INTERIOR DESIGN",
+  },
+  {
+    src: "/images/vservice2.webp",
+    link: "/classic-villa-interior-design",
+    title: "CLASSIC VILLA INTERIOR DESIGN",
   },
 ];
 
-const villaSteps = [
-  {
-    id: "01",
-    title: "Initial Consultation & Pool Concept",
-    desc: "We begin with a detailed consultation to understand your swimming pool goals, lifestyle needs, property type, design preferences, safety expectations, and budget. This helps us create a pool concept that feels elegant, practical, and suited to your outdoor space.",
-    img: "/images/mission.webp",
-  },
-  {
-    id: "02",
-    title: "Site Study & Space Planning",
-    desc: "Our team studies the available outdoor area, levels, circulation, sun exposure, privacy, access points, surrounding landscape, and utility requirements. We then prepare a plan that improves usability, comfort, aesthetics, and the overall pool experience.",
-    img: "/images/material.webp",
-  },
-  {
-    id: "03",
-    title: "Material, Finish & Feature Selection",
-    desc: "We help you choose pool finishes, coping materials, deck surfaces, lighting, water features, edge treatments, seating zones, and surrounding elements that match your design vision while ensuring durability, safety, and long-term outdoor performance.",
-    img: "/images/customized.webp",
-  },
-  {
-    id: "04",
-    title: "Technical Drawings & Design Detailing",
-    desc: "Our designers and technical team prepare swimming pool layouts, section details, lighting plans, water feature coordination, edge details, and other technical documents required for accurate planning and smooth execution.",
-    img: "/images/mission.webp",
-  },
-  {
-    id: "05",
-    title: "Execution, Build & Installation",
-    desc: "Once the design is finalized, our project team and craftsmen begin the transformation. From excavation and structural preparation to finishes, lighting, decking, water features, and surrounding enhancements, every element is executed with precision and care.",
-    img: "/images/material.webp",
-  },
-  {
-    id: "06",
-    title: "Final Finishing & Handover",
-    desc: "Before handover, we complete final checks, finishing touches, alignment review, cleaning, and quality inspection so your swimming pool area feels polished, functional, and ready for relaxation and outdoor living.",
-    img: "/images/customized.webp",
-  },
-];
+
 
 const faqs = [
   {
@@ -170,7 +145,7 @@ const SBody = () => {
                   onClick={() => setVideoLoaded(true)}
                 >
                   <Image
-                    src="/images/villa-cover.webp"
+                    src="/images/swimming-pool.jpg"
                     alt="Watch our company video"
                     width={1280}
                     height={720}
@@ -441,47 +416,7 @@ const SBody = () => {
           </div>
         </div>
 
-        <div className="bg-[#141517] py-16 mt-10">
-          <div className="max-w-6xl mx-auto text-center px-4">
-            <h2 className="text-xl sm:text-2xl md:text-3xl font-conthrax mb-2 text-[#d4af37]">
-              6-Step Process For Our Swimming Pool Design Services In Dubai
-            </h2>
-            <p className="font-play text-sm sm:text-base max-w-2xl mx-auto">
-              We follow a clear and transparent 6-step process to deliver
-              well-planned swimming pool design services in Dubai.
-            </p>
-
-            <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-12 place-items-center">
-              {villaSteps.map((step) => (
-                <div
-                  key={step.id}
-                  className="flex flex-col items-center text-center font-play"
-                >
-                  <div className="relative w-44 h-44 sm:w-48 sm:h-48 md:w-52 md:h-52 rounded-full border-[6px] border-[#8c6b1f] overflow-hidden flex items-center justify-center shadow-md bg-white">
-                    <Image
-                      src={step.img}
-                      alt={step.title}
-                      fill
-                      className="object-cover"
-                    />
-                    <div className="absolute inset-0 bg-black/30" />
-                    <span className="relative text-3xl sm:text-4xl font-conthrax text-white drop-shadow-lg">
-                      {step.id}
-                    </span>
-                  </div>
-
-                  <h3 className="mt-6 text-base sm:text-lg font-conthrax text-[#d4af37]">
-                    {step.title}
-                  </h3>
-
-                  <p className="mt-3 text-sm sm:text-base leading-relaxed max-w-xs">
-                    {step.desc}
-                  </p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
+        
 
         <div className="max-w-7xl mx-auto">
           <h2 className="text-center text-3xl font-conthrax py-12 text-[#d4af37]">
@@ -559,7 +494,7 @@ const SBody = () => {
 
             <div className="rounded-lg overflow-hidden shadow-md">
               <Image
-                src="/images/vservice1.webp"
+                src="/images/villa-exterios-in-dubai.png"
                 alt="Round luxury bed with fairy lights"
                 width={600}
                 height={400}

@@ -36,19 +36,19 @@ const Hero = () => {
     shadow-lg shadow-black/30
   "
 >
-  <p className="text-sm md:text-lg font-play mb-2 opacity-90">
-    One at the land of UAE
+
+<p className="text-sm md:text-lg font-play mb-2 opacity-90">
+    Inspired by Dubai, Designed for You
   </p>
 
-  <h1 className="text-xl md:text-3xl lg:text-5xl font-conthrax leading-snug mb-4">
-    SAUNA AND HAMMAM <br />
-    INTERIOR DESIGN <span className="">UAE</span> <br />
+  <h1 className="text-xl md:text-3xl lg:text-3xl  font-semibold font-conthrax leading-snug mb-4">
+    SAUNA & HAMMAM DESIGN <br /> DUBAI, UAE
   </h1>
-
   <p className="text-xs md:text-sm font-play mb-6 opacity-90">
     Experience the Perfect Blend of <br />
     Creativity and Functionality with Us
   </p>
+
 
   <Link
     href="/contact-us"

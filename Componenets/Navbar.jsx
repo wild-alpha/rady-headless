@@ -23,9 +23,8 @@ const navLinks = [
     name: "ABOUT US",
     href: "/about",
     dropdown: [
-      { name: "Company Profile", href: "/about/company-profile" },
-      { name: "Our Team", href: "/about/team" },
-      { name: "Our Process", href: "/about/process" },
+      { name: "About Us", href: "/about" },
+      { name: "Certification & Awards", href: "/certifications-awards" },
     ],
   },
   {

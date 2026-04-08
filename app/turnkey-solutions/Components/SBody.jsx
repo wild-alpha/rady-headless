@@ -6,13 +6,13 @@ import { useState } from "react";
 import { FaPlay } from "react-icons/fa";
 
 const designImages = [
-  "/images/vservice1.webp",
-  "/images/vservice2.webp",
-  "/images/vservice3.webp",
+  "/images/asdfg.jpg",
+  "/images/IMG_9965.jpg",
+  "/images/IMG_9913.jpg",
 ];
 
 const textImage = {
-  src: "/images/vservice1.webp",
+  src: "/images/Manooi Rose apartment Vienna resized.jpg",
   link: "/villa-damac-hills-5-bedroom",
   title: "Damac Hills Villa",
 };
@@ -23,59 +23,19 @@ const galleryImages = [
     link: "/classic-villa-interior-design",
     title: "CLASSIC VILLA INTERIOR DESIGN",
   },
-  { src: "/images/vservice3.webp", link: "/villa-lantana", title: "VILLA LATANA" },
-  { src: "/images/vservice1.webp", link: "/villa-khawaneej", title: "VILLA KHAWANEEJ" },
   {
-    src: "/images/vservice1.webp",
-    link: "/emirates-hills-villa",
-    title: "EMIRATES HILLS VILLA",
+    src: "/images/vservice2.webp",
+    link: "/classic-villa-interior-design",
+    title: "CLASSIC VILLA INTERIOR DESIGN",
   },
-  { src: "/images/vservice2.webp", link: "/mbr-city-villa", title: "MBR CITY VILLA" },
   {
-    src: "/images/vservice3.webp",
-    link: "/palm-jumeirah-villa",
-    title: "PALM JUMEIRAH VILLA",
+    src: "/images/vservice2.webp",
+    link: "/classic-villa-interior-design",
+    title: "CLASSIC VILLA INTERIOR DESIGN",
   },
 ];
 
-const villaSteps = [
-  {
-    id: "01",
-    title: "Initial Consultation & Project Brief",
-    desc: "We begin with a detailed consultation to understand your project type, business or lifestyle needs, design vision, technical requirements, timeline, and budget. This helps us define the right turnkey strategy for delivering your project from start to finish.",
-    img: "/images/mission.webp",
-  },
-  {
-    id: "02",
-    title: "Site Study & Project Planning",
-    desc: "Our team studies the site condition, layout potential, circulation, functional requirements, technical scope, and execution needs. We then prepare a project plan that aligns design, fit-out, procurement, and coordination into one streamlined process.",
-    img: "/images/material.webp",
-  },
-  {
-    id: "03",
-    title: "Design, Material & Scope Finalization",
-    desc: "We help you finalize layouts, materials, finishes, furniture, lighting, fixtures, and project deliverables that match your goals while ensuring quality, practicality, and long-term performance.",
-    img: "/images/customized.webp",
-  },
-  {
-    id: "04",
-    title: "Technical Drawings & Coordination",
-    desc: "Our designers and technical team prepare layouts, reflected ceiling plans, joinery drawings, MEP coordination, finish details, and all required technical documents needed for accurate planning and smooth execution.",
-    img: "/images/mission.webp",
-  },
-  {
-    id: "05",
-    title: "Execution, Procurement & Installation",
-    desc: "Once the design and scope are approved, our project team begins execution. From civil works and fit-out to procurement, custom joinery, furniture, lighting, finishing, and installation, every stage is managed with precision and care.",
-    img: "/images/material.webp",
-  },
-  {
-    id: "06",
-    title: "Final Handover & Project Completion",
-    desc: "Before handover, we complete final checks, snag corrections, finishing review, cleaning, and quality inspection so your turnkey project is delivered polished, functional, and ready for immediate use.",
-    img: "/images/customized.webp",
-  },
-];
+
 
 const faqs = [
   {
@@ -171,7 +131,7 @@ const SBody = () => {
                   onClick={() => setVideoLoaded(true)}
                 >
                   <Image
-                    src="/images/villa-cover.webp"
+                    src="/images/02_Reception_02[1].jpg"
                     alt="Watch our company video"
                     width={1280}
                     height={720}
@@ -206,27 +166,34 @@ const SBody = () => {
           </div>
         </div>
       </section>
-
       {/* Section 2 */}
       <section className="py-10 px-6 sm:px-10 md:px-16 lg:px-28 xl:px-40">
         <h2 className="text-center text-xs sm:text-xl md:text-xl font-bold tracking-widest mb-6 uppercase text-[#d4af37]">
-          Turnkey Solutions Dubai Services We Provide
-        </h2>
-
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-10">
-          {designImages.map((src, index) => (
-            <div key={index} className="relative aspect-square overflow-hidden">
+               OUR TURNKEY SOLUTIONS PROJECTS IN DUBAI</h2>
+        <div className="lg:max-w-[60%] grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 max-w-6xl mx-auto mb-10">
+          {galleryImages.map(({ src, link, title }, i) => (
+            <a
+              href={link}
+              key={i}
+              className="group block relative overflow-hidden rounded shadow"
+            >
               <Image
                 src={src}
-                alt={`service ${index + 1}`}
-                width={600}
-                height={600}
-                className="object-cover w-full h-full"
+                alt={title}
+                width={400}
+                height={400}
+                className="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105"
               />
-            </div>
+              <div className="absolute inset-0 bg-black/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <p className="text-white text-sm sm:text-base font-conthrax text-center">
+                  {title}
+                </p>
+              </div>
+            </a>
           ))}
         </div>
 
+ 
         <div className="w-screen ml-[calc(50%-50vw)] bg-[#f5ede5] py-10 text-center space-y-4">
           <h3 className="text-xs sm:text-xl font-semibold uppercase text-[#d4af37]">
             Get In Touch With Us
@@ -354,23 +321,10 @@ const SBody = () => {
               technical requirements, user comfort, operational flow, material
               quality, and final presentation.
             </p>
-            <p className="text-sm sm:text-base">
-              Clients trust
-              <a
-                href="https://radyinterior.ae/"
-                className="ml-1"
-              >
-                Rady Interior Design & Fit Out <span></span>
-              </a>
-              to deliver full-scope projects that feel coordinated, polished,
-              and better managed than handling multiple vendors separately.
-            </p>
-            <p className="text-sm sm:text-base">
-              From residential to commercial environments, our work focuses on
-              complete execution, consistency, and premium finishing suited to
-              Dubai’s modern project standards.
-            </p>
+            
           </div>
+                
+
 
           <div className="w-full lg:w-1/3 group relative overflow-hidden rounded-lg shadow-lg">
             <a href={textImage.link} className="block">
@@ -390,29 +344,25 @@ const SBody = () => {
           </div>
         </div>
 
-        <div className="lg:max-w-[60%] grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 max-w-6xl mx-auto mb-10">
-          {galleryImages.map(({ src, link, title }, i) => (
-            <a
-              href={link}
-              key={i}
-              className="group block relative overflow-hidden rounded shadow"
-            >
+        <h2 className="text-center text-xs sm:text-xl md:text-xl font-bold tracking-widest mb-6 uppercase text-[#d4af37]">
+          Turnkey Solutions Dubai Services We Provide
+        </h2>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-10">
+          {designImages.map((src, index) => (
+            <div key={index} className="relative aspect-square overflow-hidden">
               <Image
                 src={src}
-                alt={title}
-                width={400}
-                height={400}
-                className="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105"
+                alt={`service ${index + 1}`}
+                width={600}
+                height={600}
+                className="object-cover w-full h-full"
               />
-              <div className="absolute inset-0 bg-black/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                <p className="text-white text-sm sm:text-base font-conthrax text-center">
-                  {title}
-                </p>
-              </div>
-            </a>
+            </div>
           ))}
         </div>
 
+               
         <div className="w-screen ml-[calc(50%-50vw)] bg-[#f5ede5] py-10 text-center space-y-4">
           <h3 className="text-xs sm:text-xl font-conthrax uppercase text-[#d4af37]">
             Get In Touch With Us
@@ -440,48 +390,7 @@ const SBody = () => {
           </div>
         </div>
 
-        <div className="bg-[#141517] py-16 mt-10">
-          <div className="max-w-6xl mx-auto text-center px-4">
-            <h2 className="text-xl sm:text-2xl md:text-3xl font-conthrax mb-2 text-[#d4af37]">
-              6-Step Process For Our Turnkey Solutions In Dubai
-            </h2>
-            <p className="font-play text-sm sm:text-base max-w-2xl mx-auto">
-              We follow a clear and transparent 6-step process to deliver
-              complete turnkey solutions in Dubai from concept to handover.
-            </p>
-
-            <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-12 place-items-center">
-              {villaSteps.map((step) => (
-                <div
-                  key={step.id}
-                  className="flex flex-col items-center text-center font-play"
-                >
-                  <div className="relative w-44 h-44 sm:w-48 sm:h-48 md:w-52 md:h-52 rounded-full border-[6px] border-[#8c6b1f] overflow-hidden flex items-center justify-center shadow-md bg-white">
-                    <Image
-                      src={step.img}
-                      alt={step.title}
-                      fill
-                      className="object-cover"
-                    />
-                    <div className="absolute inset-0 bg-black/30" />
-                    <span className="relative text-3xl sm:text-4xl font-conthrax text-white drop-shadow-lg">
-                      {step.id}
-                    </span>
-                  </div>
-
-                  <h3 className="mt-6 text-base sm:text-lg font-conthrax text-[#d4af37]">
-                    {step.title}
-                  </h3>
-
-                  <p className="mt-3 text-sm sm:text-base leading-relaxed max-w-xs">
-                    {step.desc}
-                  </p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-
+       
         <div className="max-w-7xl mx-auto">
           <h2 className="text-center text-3xl font-conthrax py-12 text-[#d4af37]">
             Turnkey Solutions Dubai, Delivered from Concept to Completion
@@ -557,7 +466,7 @@ const SBody = () => {
 
             <div className="rounded-lg overflow-hidden shadow-md">
               <Image
-                src="/images/vservice1.webp"
+                src="/images/02_Reception_02[1].jpg"
                 alt="Round luxury bed with fairy lights"
                 width={600}
                 height={400}

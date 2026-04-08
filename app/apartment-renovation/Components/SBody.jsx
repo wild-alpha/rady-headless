@@ -6,13 +6,13 @@ import { useState } from "react";
 import { FaPlay } from "react-icons/fa";
 
 const designImages = [
-  "/images/vservice1.webp",
-  "/images/vservice2.webp",
-  "/images/vservice3.webp",
+  "/images/Radi53.jpg",
+  "/images/Radi30.jpg",
+  "/images/Radi52.jpg",
 ];
 
 const textImage = {
-  src: "/images/vservice1.webp",
+  src: "/images/Radi22.jpg",
   link: "/villa-damac-hills-5-bedroom",
   title: "Damac Hills Villa",
 };
@@ -23,59 +23,18 @@ const galleryImages = [
     link: "/classic-villa-interior-design",
     title: "CLASSIC VILLA INTERIOR DESIGN",
   },
-  { src: "/images/vservice3.webp", link: "/villa-lantana", title: "VILLA LATANA" },
-  { src: "/images/vservice1.webp", link: "/villa-khawaneej", title: "VILLA KHAWANEEJ" },
   {
-    src: "/images/vservice1.webp",
-    link: "/emirates-hills-villa",
-    title: "EMIRATES HILLS VILLA",
+    src: "/images/vservice2.webp",
+    link: "/classic-villa-interior-design",
+    title: "CLASSIC VILLA INTERIOR DESIGN",
   },
-  { src: "/images/vservice2.webp", link: "/mbr-city-villa", title: "MBR CITY VILLA" },
   {
-    src: "/images/vservice3.webp",
-    link: "/palm-jumeirah-villa",
-    title: "PALM JUMEIRAH VILLA",
+    src: "/images/vservice2.webp",
+    link: "/classic-villa-interior-design",
+    title: "CLASSIC VILLA INTERIOR DESIGN",
   },
 ];
 
-const villaSteps = [
-  {
-    id: "01",
-    title: "Initial Consultation & Renovation Brief",
-    desc: "We begin with a detailed consultation to understand your apartment condition, renovation goals, lifestyle needs, design preferences, and budget. This helps us define the right renovation direction for your space.",
-    img: "/images/mission.webp",
-  },
-  {
-    id: "02",
-    title: "Site Inspection & Space Evaluation",
-    desc: "Our team carefully studies the existing apartment layout, structural limitations, circulation, storage possibilities, lighting, and functional challenges. We then identify practical renovation opportunities for better use of space.",
-    img: "/images/material.webp",
-  },
-  {
-    id: "03",
-    title: "Material, Finishes & Design Selection",
-    desc: "We help you choose materials, finishes, fixtures, lighting, flooring, and furniture elements that suit your apartment renovation style while improving comfort, durability, and visual appeal.",
-    img: "/images/customized.webp",
-  },
-  {
-    id: "04",
-    title: "Technical Drawings & Planning",
-    desc: "Our team prepares layout plans, ceiling plans, joinery details, electrical layouts, and renovation drawings required for proper planning, approvals where needed, and smooth execution on site.",
-    img: "/images/mission.webp",
-  },
-  {
-    id: "05",
-    title: "Renovation Execution & Installation",
-    desc: "Once everything is finalized, our site team and craftsmen begin the renovation process. From demolition and civil adjustments to flooring, ceilings, joinery, painting, and installations, every stage is handled with care.",
-    img: "/images/material.webp",
-  },
-  {
-    id: "06",
-    title: "Final Finishing & Handover",
-    desc: "Before handover, we complete all finishing touches, styling adjustments, snag corrections, and final quality checks so your renovated apartment is polished, functional, and ready for comfortable modern living.",
-    img: "/images/customized.webp",
-  },
-];
 
 const faqs = [
   {
@@ -169,7 +128,7 @@ const SBody = () => {
                   onClick={() => setVideoLoaded(true)}
                 >
                   <Image
-                    src="/images/villa-cover.webp"
+                    src="/images/IMG_0034.jpg"
                     alt="Watch our company video"
                     width={1280}
                     height={720}
@@ -208,20 +167,27 @@ const SBody = () => {
       {/* Section 2 */}
       <section className="py-10 px-6 sm:px-10 md:px-16 lg:px-28 xl:px-40">
         <h2 className="text-center text-xs sm:text-xl md:text-xl font-bold tracking-widest mb-6 uppercase text-[#d4af37]">
-          Apartment Renovation Dubai Services We Provide
-        </h2>
-
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-10">
-          {designImages.map((src, index) => (
-            <div key={index} className="relative aspect-square overflow-hidden">
+      OUR APARTMENT RENOVATION PROJECTS IN DUBAI</h2>
+        <div className="lg:max-w-[60%] grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 max-w-6xl mx-auto mb-10">
+          {galleryImages.map(({ src, link, title }, i) => (
+            <a
+              href={link}
+              key={i}
+              className="group block relative overflow-hidden rounded shadow"
+            >
               <Image
                 src={src}
-                alt={`service ${index + 1}`}
-                width={600}
-                height={600}
-                className="object-cover w-full h-full"
+                alt={title}
+                width={400}
+                height={400}
+                className="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105"
               />
-            </div>
+              <div className="absolute inset-0 bg-black/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <p className="text-white text-sm sm:text-base font-conthrax text-center">
+                  {title}
+                </p>
+              </div>
+            </a>
           ))}
         </div>
 
@@ -387,30 +353,24 @@ const SBody = () => {
             </a>
           </div>
         </div>
+            
+             <h2 className="text-center text-xs sm:text-xl md:text-xl font-bold tracking-widest mb-6 uppercase text-[#d4af37]">
+          Apartment Renovation Dubai Services We Provide
+        </h2>
 
-        <div className="lg:max-w-[60%] grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 max-w-6xl mx-auto mb-10">
-          {galleryImages.map(({ src, link, title }, i) => (
-            <a
-              href={link}
-              key={i}
-              className="group block relative overflow-hidden rounded shadow"
-            >
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-10">
+          {designImages.map((src, index) => (
+            <div key={index} className="relative aspect-square overflow-hidden">
               <Image
                 src={src}
-                alt={title}
-                width={400}
-                height={400}
-                className="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105"
+                alt={`service ${index + 1}`}
+                width={600}
+                height={600}
+                className="object-cover w-full h-full"
               />
-              <div className="absolute inset-0 bg-black/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                <p className="text-white text-sm sm:text-base font-conthrax text-center">
-                  {title}
-                </p>
-              </div>
-            </a>
+            </div>
           ))}
         </div>
-
         <div className="w-screen ml-[calc(50%-50vw)] bg-[#f5ede5] py-10 text-center space-y-4">
           <h3 className="text-xs sm:text-xl font-conthrax uppercase text-[#d4af37]">
             Get In Touch With Us
@@ -438,47 +398,7 @@ const SBody = () => {
           </div>
         </div>
 
-        <div className="bg-[#141517] py-16 mt-10">
-          <div className="max-w-6xl mx-auto text-center px-4">
-            <h2 className="text-xl sm:text-2xl md:text-3xl font-conthrax mb-2 text-[#d4af37]">
-              6-Step Process For Our Apartment Renovation Services In Dubai
-            </h2>
-            <p className="font-play text-sm sm:text-base max-w-2xl mx-auto">
-              We follow a clear and transparent 6-step process to deliver smooth
-              and well-managed apartment renovation services in Dubai.
-            </p>
-
-            <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-12 place-items-center">
-              {villaSteps.map((step) => (
-                <div
-                  key={step.id}
-                  className="flex flex-col items-center text-center font-play"
-                >
-                  <div className="relative w-44 h-44 sm:w-48 sm:h-48 md:w-52 md:h-52 rounded-full border-[6px] border-[#8c6b1f] overflow-hidden flex items-center justify-center shadow-md bg-white">
-                    <Image
-                      src={step.img}
-                      alt={step.title}
-                      fill
-                      className="object-cover"
-                    />
-                    <div className="absolute inset-0 bg-black/30" />
-                    <span className="relative text-3xl sm:text-4xl font-conthrax text-white drop-shadow-lg">
-                      {step.id}
-                    </span>
-                  </div>
-
-                  <h3 className="mt-6 text-base sm:text-lg font-conthrax text-[#d4af37]">
-                    {step.title}
-                  </h3>
-
-                  <p className="mt-3 text-sm sm:text-base leading-relaxed max-w-xs">
-                    {step.desc}
-                  </p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
+      
 
         <div className="max-w-7xl mx-auto">
           <h2 className="text-center text-3xl font-conthrax py-12 text-[#d4af37]">
@@ -554,7 +474,7 @@ const SBody = () => {
 
             <div className="rounded-lg overflow-hidden shadow-md">
               <Image
-                src="/images/vservice1.webp"
+                src="/images/Radi59.jpg"
                 alt="Round luxury bed with fairy lights"
                 width={600}
                 height={400}

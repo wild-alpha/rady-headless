@@ -3,8 +3,8 @@ import '../globals.css';
 export const metadata = {
   title: " Apartment renovation, UAE - Modern Interior Design",
   description:
-    "Apartment renovation in UAE by WE DO. Modern, classic, or creative styles, beautiful spaces made for you. Call now to start your project!",
-  metadataBase: new URL('https://www.casakraftinteriors.ae/'),
+    "Apartment renovation in Dubai by RadyInteriors. Modern, classic, or creative styles, beautiful spaces made for you. Call now to start your project!",
+  metadataBase: new URL('hhttps://radyinterior.ae/'),
   alternates: {
     canonical: '/apartment-renovation',
   },

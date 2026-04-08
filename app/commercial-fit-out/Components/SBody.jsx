@@ -6,15 +6,15 @@ import { useState } from "react";
 import { FaPlay } from "react-icons/fa";
 
 const designImages = [
-  "/images/vservice1.webp",
-  "/images/vservice2.webp",
-  "/images/vservice3.webp",
+  "/images/Screenshot_20230315-120936_Instagram.jpg",
+  "/images/Iceberg oval color 1.jpg",
+  "/images/Screenshot_20230315-120729_Instagram.jpg",
 ];
 
 const textImage = {
-  src: "/images/vservice1.webp",
+  src: "/images/111.jpg",
   link: "/villa-damac-hills-5-bedroom",
-  title: "Damac Hills Villa",
+  title: "Commercial Fitout Dubai",
 };
 
 const galleryImages = [
@@ -23,59 +23,34 @@ const galleryImages = [
     link: "/classic-villa-interior-design",
     title: "CLASSIC VILLA INTERIOR DESIGN",
   },
-  { src: "/images/vservice3.webp", link: "/villa-lantana", title: "VILLA LATANA" },
-  { src: "/images/vservice1.webp", link: "/villa-khawaneej", title: "VILLA KHAWANEEJ" },
   {
-    src: "/images/vservice1.webp",
-    link: "/emirates-hills-villa",
-    title: "EMIRATES HILLS VILLA",
+    src: "/images/vservice2.webp",
+    link: "/classic-villa-interior-design",
+    title: "CLASSIC VILLA INTERIOR DESIGN",
   },
-  { src: "/images/vservice2.webp", link: "/mbr-city-villa", title: "MBR CITY VILLA" },
   {
-    src: "/images/vservice3.webp",
-    link: "/palm-jumeirah-villa",
-    title: "PALM JUMEIRAH VILLA",
+    src: "/images/vservice2.webp",
+    link: "/classic-villa-interior-design",
+    title: "CLASSIC VILLA INTERIOR DESIGN",
+  },
+  {
+    src: "/images/vservice2.webp",
+    link: "/classic-villa-interior-design",
+    title: "CLASSIC VILLA INTERIOR DESIGN",
+  },
+  {
+    src: "/images/vservice2.webp",
+    link: "/classic-villa-interior-design",
+    title: "CLASSIC VILLA INTERIOR DESIGN",
+  },
+  {
+    src: "/images/vservice2.webp",
+    link: "/classic-villa-interior-design",
+    title: "CLASSIC VILLA INTERIOR DESIGN",
   },
 ];
 
-const villaSteps = [
-  {
-    id: "01",
-    title: "Initial Consultation & Project Brief",
-    desc: "We begin with a detailed consultation to understand your business type, space requirements, brand direction, functional needs, workflow, timeline, and budget. This helps us define the right commercial fit out strategy for your project.",
-    img: "/images/mission.webp",
-  },
-  {
-    id: "02",
-    title: "Site Inspection & Space Planning",
-    desc: "Our team carefully studies the existing layout, access, circulation, service requirements, spatial challenges, and operational needs of your commercial unit. We then prepare a fit out plan that supports efficiency, comfort, and business performance.",
-    img: "/images/material.webp",
-  },
-  {
-    id: "03",
-    title: "Material, Finish & Fixture Selection",
-    desc: "We help you select flooring, ceilings, partitions, lighting, counters, joinery, furniture, and finishes that reflect your brand image while maintaining durability, practicality, and long-term commercial use.",
-    img: "/images/customized.webp",
-  },
-  {
-    id: "04",
-    title: "Technical Drawings & Fit Out Planning",
-    desc: "Our designers and technical team prepare layouts, reflected ceiling plans, joinery drawings, MEP coordination, detailed fit out drawings, and supporting documents needed for proper planning and execution.",
-    img: "/images/mission.webp",
-  },
-  {
-    id: "05",
-    title: "Execution, Fit Out & Installation",
-    desc: "Once the design and technical scope are approved, our project team and craftsmen begin site execution. From civil works and partitions to ceilings, flooring, joinery, MEP works, and installations, every stage is handled with precision.",
-    img: "/images/material.webp",
-  },
-  {
-    id: "06",
-    title: "Final Finishing & Handover",
-    desc: "Before handover, we complete finishing checks, snag corrections, cleaning, final adjustments, and quality review to ensure your commercial space is polished, functional, and ready for business operations.",
-    img: "/images/customized.webp",
-  },
-];
+
 
 const faqs = [
   {
@@ -116,7 +91,7 @@ const SBody = () => {
           <div className="flex flex-col lg:flex-row gap-12">
             <div className="w-full lg:w-1/2 flex flex-col justify-start">
               <h2 className="text-sm sm:text-xl md:text-xl font-bold tracking-widest py-2 text-[#d4af37]">
-                Professional commercial fit out services in Dubai
+               Commercial fit out services in Dubai
               </h2>
 
               <p className="text-sm sm:text-base leading-7 mb-4">
@@ -162,7 +137,7 @@ const SBody = () => {
 
             <div className="w-full lg:w-1/2 flex flex-col justify-center items-start space-y-6">
               <h2 className="text-xs sm:text-xl md:text-xl font-bold tracking-widest text-[#d4af37]">
-                Get Best Commercial Fit Out Services in Dubai
+                Get Best Fit Out Services in Dubai
               </h2>
 
               {!videoLoaded ? (
@@ -171,7 +146,7 @@ const SBody = () => {
                   onClick={() => setVideoLoaded(true)}
                 >
                   <Image
-                    src="/images/villa-cover.webp"
+                    src="/images/WhatsApp Image 2022-06-06 at 2.17.35 PM (3).jpeg"
                     alt="Watch our company video"
                     width={1280}
                     height={720}
@@ -389,7 +364,8 @@ const SBody = () => {
             </a>
           </div>
         </div>
-
+     <h2 className="text-center text-xs sm:text-xl md:text-xl font-bold tracking-widest mb-6 uppercase text-[#d4af37]">
+      OUR COMMERICAL FIT-OUT PROJECTS IN DUBAI</h2> 
         <div className="lg:max-w-[60%] grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 max-w-6xl mx-auto mb-10">
           {galleryImages.map(({ src, link, title }, i) => (
             <a
@@ -440,48 +416,7 @@ const SBody = () => {
           </div>
         </div>
 
-        <div className="bg-[#141517] py-16 mt-10">
-          <div className="max-w-6xl mx-auto text-center px-4">
-            <h2 className="text-xl sm:text-2xl md:text-3xl font-conthrax mb-2 text-[#d4af37]">
-              6-Step Process For Our Commercial Fit Out Services In Dubai
-            </h2>
-            <p className="font-play text-sm sm:text-base max-w-2xl mx-auto">
-              We follow a clear and transparent 6-step process to deliver smooth
-              and well-managed commercial fit out services in Dubai.
-            </p>
-
-            <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-12 place-items-center">
-              {villaSteps.map((step) => (
-                <div
-                  key={step.id}
-                  className="flex flex-col items-center text-center font-play"
-                >
-                  <div className="relative w-44 h-44 sm:w-48 sm:h-48 md:w-52 md:h-52 rounded-full border-[6px] border-[#8c6b1f] overflow-hidden flex items-center justify-center shadow-md bg-white">
-                    <Image
-                      src={step.img}
-                      alt={step.title}
-                      fill
-                      className="object-cover"
-                    />
-                    <div className="absolute inset-0 bg-black/30" />
-                    <span className="relative text-3xl sm:text-4xl font-conthrax text-white drop-shadow-lg">
-                      {step.id}
-                    </span>
-                  </div>
-
-                  <h3 className="mt-6 text-base sm:text-lg font-conthrax text-[#d4af37]">
-                    {step.title}
-                  </h3>
-
-                  <p className="mt-3 text-sm sm:text-base leading-relaxed max-w-xs">
-                    {step.desc}
-                  </p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-
+        
         <div className="max-w-7xl mx-auto">
           <h2 className="text-center text-3xl font-conthrax py-12 text-[#d4af37]">
             Commercial Fit Out Dubai, Built for Business Performance
@@ -557,7 +492,7 @@ const SBody = () => {
 
             <div className="rounded-lg overflow-hidden shadow-md">
               <Image
-                src="/images/vservice1.webp"
+                src="/images/WhatsApp Image 2022-06-06 at 2.17.35 PM (1).jpeg"
                 alt="Round luxury bed with fairy lights"
                 width={600}
                 height={400}

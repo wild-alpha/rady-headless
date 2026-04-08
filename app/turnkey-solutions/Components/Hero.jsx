@@ -9,7 +9,7 @@ const Hero = () => {
     <div className="relative w-full h-[400px] md:h-[500px] lg:h-[650px] overflow-hidden">
       {/* Background Image */}
       <Image
-        src="/images/villa-cover.webp"
+        src="/images/Villas-Al-Barari-Dubai-Pool-Table.jpg"
         alt="interior design"
         width={1920}
         height={1080}
@@ -36,20 +36,17 @@ const Hero = () => {
     shadow-lg shadow-black/30
   "
 >
-  <p className="text-sm md:text-lg font-play mb-2 opacity-90">
-    One at the land of UAE
+ <p className="text-sm md:text-lg font-play mb-2 opacity-90">
+    Inspired by Dubai, Designed for You
   </p>
 
-  <h1 className="text-xl md:text-3xl lg:text-5xl font-conthrax leading-snug mb-4">
-    TURNKEY DESIGN <br />
-    SOLUTIONS <span className="">DUBAI</span> <br />
+  <h1 className="text-xl md:text-3xl lg:text-3xl  font-semibold font-conthrax leading-snug mb-4">
+    APARTMENT INTERIOR DESIGN <br /> DUBAI, UAE
   </h1>
-
   <p className="text-xs md:text-sm font-play mb-6 opacity-90">
     Experience the Perfect Blend of <br />
     Creativity and Functionality with Us
   </p>
-
   <Link
     href="/contact-us"
     className="inline-flex items-center gap-2 bg-[#e9c35f] text-white px-5 py-3 text-xs md:text-sm font-semibold uppercase rounded-full hover:bg-white transition hover:text-black"

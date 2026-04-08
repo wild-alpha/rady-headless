@@ -23,59 +23,19 @@ const galleryImages = [
     link: "/classic-villa-interior-design",
     title: "CLASSIC VILLA INTERIOR DESIGN",
   },
-  { src: "/images/vservice3.webp", link: "/villa-lantana", title: "VILLA LATANA" },
-  { src: "/images/vservice1.webp", link: "/villa-khawaneej", title: "VILLA KHAWANEEJ" },
   {
-    src: "/images/vservice1.webp",
-    link: "/emirates-hills-villa",
-    title: "EMIRATES HILLS VILLA",
+    src: "/images/vservice2.webp",
+    link: "/classic-villa-interior-design",
+    title: "CLASSIC VILLA INTERIOR DESIGN",
   },
-  { src: "/images/vservice2.webp", link: "/mbr-city-villa", title: "MBR CITY VILLA" },
   {
-    src: "/images/vservice3.webp",
-    link: "/palm-jumeirah-villa",
-    title: "PALM JUMEIRAH VILLA",
+    src: "/images/vservice2.webp",
+    link: "/classic-villa-interior-design",
+    title: "CLASSIC VILLA INTERIOR DESIGN",
   },
+ 
 ];
 
-const villaSteps = [
-  {
-    id: "01",
-    title: "Initial Consultation & Joinery Brief",
-    desc: "We begin with a detailed consultation to understand your joinery requirements, space dimensions, style preferences, storage needs, finish expectations, and budget. This helps us develop custom joinery solutions tailored to your space and lifestyle.",
-    img: "/images/mission.webp",
-  },
-  {
-    id: "02",
-    title: "Site Measurement & Space Planning",
-    desc: "Our team studies the available area, circulation, proportions, wall conditions, storage opportunities, and how the joinery will function within the interior. We then plan customized joinery that fits perfectly and improves usability.",
-    img: "/images/material.webp",
-  },
-  {
-    id: "03",
-    title: "Material, Finish & Hardware Selection",
-    desc: "We help you select wood finishes, veneers, laminates, paints, metal details, handles, hinges, internal fittings, and other hardware that match your design style while ensuring durability and smooth long-term performance.",
-    img: "/images/customized.webp",
-  },
-  {
-    id: "04",
-    title: "Technical Drawings & Joinery Detailing",
-    desc: "Our designers and technical team prepare customized joinery drawings, dimensions, section details, finish references, and production documents needed for accurate fabrication and smooth installation.",
-    img: "/images/mission.webp",
-  },
-  {
-    id: "05",
-    title: "Manufacturing & Installation",
-    desc: "Once the design is approved, our craftsmen begin manufacturing with close attention to precision, detailing, and finish quality. After production, the joinery pieces are delivered and installed carefully on site.",
-    img: "/images/material.webp",
-  },
-  {
-    id: "06",
-    title: "Final Finishing & Handover",
-    desc: "Before handover, we complete installation checks, alignment review, finish touch-ups, hardware testing, and final quality checks to ensure your customized joinery looks refined and functions perfectly.",
-    img: "/images/customized.webp",
-  },
-];
 
 const faqs = [
   {
@@ -208,21 +168,26 @@ const SBody = () => {
 
       {/* Section 2 */}
       <section className="py-10 px-6 sm:px-10 md:px-16 lg:px-28 xl:px-40">
-        <h2 className="text-center text-xs sm:text-xl md:text-xl font-bold tracking-widest mb-6 uppercase text-[#d4af37]">
-          Customized Joinery Dubai Services We Provide
-        </h2>
-
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-10">
-          {designImages.map((src, index) => (
-            <div key={index} className="relative aspect-square overflow-hidden">
+             <div className="lg:max-w-[60%] grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 max-w-6xl mx-auto mb-10">
+          {galleryImages.map(({ src, link, title }, i) => (
+            <a
+              href={link}
+              key={i}
+              className="group block relative overflow-hidden rounded shadow"
+            >
               <Image
                 src={src}
-                alt={`service ${index + 1}`}
-                width={600}
-                height={600}
-                className="object-cover w-full h-full"
+                alt={title}
+                width={400}
+                height={400}
+                className="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105"
               />
-            </div>
+              <div className="absolute inset-0 bg-black/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <p className="text-white text-sm sm:text-base font-conthrax text-center">
+                  {title}
+                </p>
+              </div>
+            </a>
           ))}
         </div>
 
@@ -387,29 +352,24 @@ const SBody = () => {
             </a>
           </div>
         </div>
+      <h2 className="text-center text-xs sm:text-xl md:text-xl font-bold tracking-widest mb-6 uppercase text-[#d4af37]">
+          Customized Joinery Dubai Services We Provide
+        </h2>
 
-        <div className="lg:max-w-[60%] grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 max-w-6xl mx-auto mb-10">
-          {galleryImages.map(({ src, link, title }, i) => (
-            <a
-              href={link}
-              key={i}
-              className="group block relative overflow-hidden rounded shadow"
-            >
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-10">
+          {designImages.map((src, index) => (
+            <div key={index} className="relative aspect-square overflow-hidden">
               <Image
                 src={src}
-                alt={title}
-                width={400}
-                height={400}
-                className="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105"
+                alt={`service ${index + 1}`}
+                width={600}
+                height={600}
+                className="object-cover w-full h-full"
               />
-              <div className="absolute inset-0 bg-black/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                <p className="text-white text-sm sm:text-base font-conthrax text-center">
-                  {title}
-                </p>
-              </div>
-            </a>
+            </div>
           ))}
         </div>
+        
 
         <div className="w-screen ml-[calc(50%-50vw)] bg-[#f5ede5] py-10 text-center space-y-4">
           <h3 className="text-xs sm:text-xl font-conthrax uppercase text-[#d4af37]">
@@ -438,47 +398,7 @@ const SBody = () => {
           </div>
         </div>
 
-        <div className="bg-[#141517] py-16 mt-10">
-          <div className="max-w-6xl mx-auto text-center px-4">
-            <h2 className="text-xl sm:text-2xl md:text-3xl font-conthrax mb-2 text-[#d4af37]">
-              6-Step Process For Our Customized Joinery Services In Dubai
-            </h2>
-            <p className="font-play text-sm sm:text-base max-w-2xl mx-auto">
-              We follow a clear and transparent 6-step process to deliver
-              well-planned customized joinery services in Dubai.
-            </p>
-
-            <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-12 place-items-center">
-              {villaSteps.map((step) => (
-                <div
-                  key={step.id}
-                  className="flex flex-col items-center text-center font-play"
-                >
-                  <div className="relative w-44 h-44 sm:w-48 sm:h-48 md:w-52 md:h-52 rounded-full border-[6px] border-[#8c6b1f] overflow-hidden flex items-center justify-center shadow-md bg-white">
-                    <Image
-                      src={step.img}
-                      alt={step.title}
-                      fill
-                      className="object-cover"
-                    />
-                    <div className="absolute inset-0 bg-black/30" />
-                    <span className="relative text-3xl sm:text-4xl font-conthrax text-white drop-shadow-lg">
-                      {step.id}
-                    </span>
-                  </div>
-
-                  <h3 className="mt-6 text-base sm:text-lg font-conthrax text-[#d4af37]">
-                    {step.title}
-                  </h3>
-
-                  <p className="mt-3 text-sm sm:text-base leading-relaxed max-w-xs">
-                    {step.desc}
-                  </p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
+        
 
         <div className="max-w-7xl mx-auto">
           <h2 className="text-center text-3xl font-conthrax py-12 text-[#d4af37]">

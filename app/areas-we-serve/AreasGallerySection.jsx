@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useMemo, useState } from "react";
+import React, { useEffect, useMemo, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -192,8 +192,26 @@ const areas = [
   },
 ];
 
-const AreasGallerySection = () => {
-  const [activeCategory, setActiveCategory] = useState("All");
+const normalizeCategory = (value) => {
+  if (!value) return "All";
+
+  const decodedValue = decodeURIComponent(value).trim().toLowerCase();
+
+  const matchedCategory = categories.find(
+    (cat) => cat.toLowerCase() === decodedValue
+  );
+
+  return matchedCategory || "All";
+};
+
+const AreasGallerySection = ({ initialCategory = "All" }) => {
+  const [activeCategory, setActiveCategory] = useState(
+    normalizeCategory(initialCategory)
+  );
+
+  useEffect(() => {
+    setActiveCategory(normalizeCategory(initialCategory));
+  }, [initialCategory]);
 
   const filteredAreas = useMemo(() => {
     if (activeCategory === "All") return areas;
@@ -212,9 +230,9 @@ const AreasGallerySection = () => {
                 <button
                   key={cat}
                   onClick={() => setActiveCategory(cat)}
-                  className={`px-4 py-2 rounded-full text-sm font-play transition duration-300 ${
+                  className={`rounded-full px-4 py-2 text-sm font-play transition duration-300 ${
                     isActive
-                      ? "bg-[#1a1408] text-[#d4af37] border border-[#8c6b1f]"
+                      ? "border border-[#8c6b1f] bg-[#1a1408] text-[#d4af37]"
                       : "text-white hover:text-[#d4af37]"
                   }`}
                 >
@@ -225,11 +243,11 @@ const AreasGallerySection = () => {
           </div>
         </div>
 
-        <div className="mt-10 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5">
+        <div className="mt-10 grid grid-cols-1 gap-5 md:grid-cols-2 xl:grid-cols-3">
           {filteredAreas.map((area, i) => (
             <div
               key={i}
-              className="group mx-auto w-full max-w-[320px] bg-[#0d0a05] overflow-hidden transition duration-300 hover:-translate-y-1"
+              className="group mx-auto w-full max-w-[320px] overflow-hidden bg-[#0d0a05] transition duration-300 hover:-translate-y-1"
             >
               <div className="relative h-[180px] overflow-hidden">
                 <Image
@@ -240,17 +258,15 @@ const AreasGallerySection = () => {
                 />
               </div>
 
-              <div className="bg-[#100b04] px-4 py-4 text-center border-t border-[#8c6b1f]/20">
-                <h3 className="text-white text-[17px] font-play">
+              <div className="border-t border-[#8c6b1f]/20 bg-[#100b04] px-4 py-4 text-center">
+                <h3 className="font-play text-[17px] text-white">
                   {area.title}
                 </h3>
 
-                <p className="text-white/50 text-xs mt-1">
-                  {area.subtitle}
-                </p>
+                <p className="mt-1 text-xs text-white/50">{area.subtitle}</p>
 
                 <Link href={area.href}>
-                  <button className="mt-3 w-full border border-[#8c6b1f]/60 text-[#d4af37] py-2 rounded-md text-sm transition duration-300 hover:bg-[#1a1408] hover:text-[#f0c95a]">
+                  <button className="mt-3 w-full rounded-md border border-[#8c6b1f]/60 py-2 text-sm text-[#d4af37] transition duration-300 hover:bg-[#1a1408] hover:text-[#f0c95a]">
                     View Area →
                   </button>
                 </Link>

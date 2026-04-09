@@ -5,14 +5,26 @@ import Link from "next/link";
 import { useState } from "react";
 import { FaPlay } from "react-icons/fa";
 
-const designImages = [
-  "/images/1_CShading_LightMix_View01.jpg",
-  "/images/I.jpg",
-  "/images/cam02.jpg",
+const serviceCards = [
+  {
+    src: "/images/WhatsApp Image 2026-03-03 at 12.30.32 PM copy.jpg",
+    link: "/prayer-room-interior-design-dubai",
+    title: "Prayer Room Interior Design",
+  },
+  {
+    src: "/images/1 (8).jpg",
+    link: "/home-prayer-room-design-dubai",
+    title: "Home Prayer Room Design",
+  },
+  {
+    src: "/images/2 (8).jpg",
+    link: "/modern-prayer-room-design-dubai",
+    title: "Modern Prayer Room Design",
+  },
 ];
 
 const textImage = {
-  src: "/images/2 (7).jpg",
+  src: "/images/5 (7).jpg",
   link: "/villa-damac-hills-5-bedroom",
   title: "Damac Hills Villa",
 };
@@ -54,66 +66,68 @@ const villaSteps = [
   {
     id: "01",
     title: "Initial Consultation & Design Brief",
-    desc: "We begin with a detailed consultation to understand your majlis requirements, cultural preferences, seating style, guest hosting needs, design taste, and budget. This helps us create a majlis concept that feels elegant, welcoming, and tailored to your lifestyle.",
+    desc: "We begin with a detailed consultation to understand your prayer room needs, spiritual preferences, daily usage, privacy expectations, design taste, and budget. This helps us shape a prayer room concept that feels peaceful, elegant, and deeply personal.",
     img: "/images/mission.webp",
   },
   {
     id: "02",
     title: "Site Study & Space Planning",
-    desc: "Our team studies the majlis layout, circulation, entrance flow, seating arrangement, focal points, lighting potential, and available space. We then prepare a space plan that improves comfort, visual balance, and the overall guest experience.",
+    desc: "Our team studies the prayer room layout, circulation, natural light, wall orientation, storage needs, seating possibilities, and available space. We then prepare a layout plan that improves calmness, comfort, and functional simplicity.",
     img: "/images/material.webp",
   },
   {
     id: "03",
-    title: "Material, Furniture & Finish Selection",
-    desc: "We help you choose majlis seating, wall finishes, carpets, curtains, lighting, decorative details, and furniture elements that match your design style while ensuring comfort, durability, and a refined atmosphere.",
+    title: "Material, Lighting & Finish Selection",
+    desc: "We help you choose wall finishes, flooring, carpets, lighting, shelving, decorative details, and soft interior elements that match the spiritual atmosphere you want while ensuring comfort, durability, and refined beauty.",
     img: "/images/customized.webp",
   },
   {
     id: "04",
     title: "Technical Drawings & Design Detailing",
-    desc: "Our designers and technical team prepare majlis layouts, ceiling plans, wall feature details, lighting drawings, joinery plans, and other documents required for accurate planning and smooth execution.",
+    desc: "Our designers and technical team prepare prayer room layouts, ceiling plans, lighting drawings, wall feature details, joinery plans, and other documents required for accurate planning and smooth execution.",
     img: "/images/mission.webp",
   },
   {
     id: "05",
     title: "Fit-Out Execution & Installation",
-    desc: "Once the design is finalized, our craftsmen and project team begin the transformation. From wall finishes and custom joinery to seating installation, lighting, and decorative detailing, every element is executed with care and precision.",
+    desc: "Once the design is finalized, our craftsmen and project team begin the transformation. From wall finishes and custom shelving to lighting, flooring, carpets, and decorative detailing, every element is executed with care and precision.",
     img: "/images/material.webp",
   },
   {
     id: "06",
     title: "Final Styling & Handover",
-    desc: "Before handover, we complete final styling, finishing checks, seating arrangement, accessory placement, and quality review so your majlis feels polished, welcoming, and ready for family gatherings and guest hosting.",
+    desc: "Before handover, we complete final styling, finishing checks, accessory placement, cleaning, and quality review so your prayer room feels serene, polished, and ready for peaceful daily worship.",
     img: "/images/customized.webp",
   },
 ];
 
 const faqs = [
   {
-    question: "How long does a majlis interior design project in Dubai usually take?",
+    question: "How long does a prayer room interior design project in Dubai usually take?",
     answer:
-      "The timeline depends on the majlis size, design scope, and level of customization involved. In most cases, majlis interior design projects in Dubai can take from a few weeks to a couple of months from concept to final setup.",
+      "The timeline depends on the room size, design scope, and level of customization involved. In most cases, prayer room interior design projects in Dubai can take from a few weeks to a couple of months from concept to final setup.",
   },
   {
-    question: "Can you design both traditional and modern majlis interiors?",
+    question:
+      "Can you design both compact prayer rooms and larger dedicated worship spaces?",
     answer:
-      "Yes, we design majlis interiors in different styles, including traditional Arabic majlis, contemporary majlis, luxury majlis spaces, and modern formal sitting areas across Dubai.",
+      "Yes, we design all types of prayer spaces, from compact private prayer corners and home musalla rooms to larger dedicated prayer rooms in villas and residences across Dubai.",
   },
   {
-    question: "Do you provide both majlis design and fit-out execution?",
+    question: "Do you provide both prayer room design and fit-out execution?",
     answer:
-      "Yes, we offer complete majlis interior design support including concept development, seating planning, material selection, technical drawings, custom joinery, and fit-out coordination.",
+      "Yes, we offer complete prayer room interior design support including concept development, space planning, material selection, technical drawings, custom shelving or joinery, and fit-out coordination.",
   },
   {
-    question: "What affects the cost of majlis interior design in Dubai?",
+    question:
+      "What affects the cost of prayer room interior design in Dubai?",
     answer:
-      "The cost depends on the majlis size, seating design, wall treatments, ceiling features, lighting, carpets, curtains, joinery details, decorative elements, and the overall level of customization involved in the project.",
+      "The cost depends on the room size, wall finishes, ceiling details, lighting, carpets, shelving, decorative features, custom joinery, and the overall level of customization involved in the project.",
   },
   {
-    question: "Can you make a majlis feel both luxurious and comfortable?",
+    question: "Can you make a prayer room feel both peaceful and elegant?",
     answer:
-      "Yes, our majlis design approach focuses on combining elegant layouts, comfortable seating, refined finishes, layered lighting, and thoughtful styling so the space feels both luxurious and welcoming.",
+      "Yes, our prayer room design approach focuses on combining soft layouts, calm lighting, refined finishes, spiritual simplicity, and thoughtful styling so the space feels both peaceful and beautifully designed.",
   },
 ];
 
@@ -128,43 +142,33 @@ const SBody = () => {
           <div className="flex flex-col lg:flex-row gap-12">
             <div className="w-full lg:w-1/2 flex flex-col justify-start">
               <h2 className="text-sm sm:text-xl md:text-xl font-bold tracking-widest py-2 text-[#d4af37]">
-                Premium majlis interior design services in Dubai
+                Peaceful prayer room interior design services in Dubai
               </h2>
 
               <p className="text-sm sm:text-base leading-7 mb-4">
                 Are you looking for
-                <a
-                  href="https://radyinterior.ae/"
-                  className=" ml-1"
-                >
-                  majlis interior design services in Dubai <span></span>
+                <a href="https://radyinterior.ae/" className=" ml-1">
+                  prayer room interior design services in Dubai <span></span>
                 </a>
-                that combine elegance, hospitality, and cultural character. You
-                are at the right place.
+                that combine serenity, elegance, and spiritual comfort. You are
+                at the right place.
                 <br />
                 With 15+ years of experience in residential interior design,
-                <a
-                  href="https://radyinterior.ae/"
-                  className="ml-1"
-                >
+                <a href="https://radyinterior.ae/" className="ml-1">
                   Rady Interior Design & Fit Out, <span></span>
                 </a>
-                creates majlis interiors that feel welcoming, sophisticated, and
-                tailored to your family traditions, guest hosting style, and design
-                preferences.
+                creates prayer room interiors that feel calm, refined, and
+                tailored to peaceful daily worship and reflection.
                 <br />
-                Whether you want a traditional Arabic majlis, a contemporary majlis,
-                or a luxury formal sitting space for entertaining guests, our team
-                helps shape interiors that feel warm, refined, and memorable. Keep
-                reading to discover how
-                <a
-                  href="https://radyinterior.ae/"
-                  className="ml-1"
-                >
+                Whether you want a dedicated home prayer room or a beautifully
+                designed prayer corner within your residence, our team helps shape
+                spaces that feel spiritually uplifting, comfortable, and visually
+                balanced. Keep reading to discover how
+                <a href="https://radyinterior.ae/" className="ml-1">
                   Rady Interior Design & Fit Out, <span></span>
                 </a>
-                delivers majlis interior design solutions in Dubai tailored to your
-                lifestyle, comfort needs, and design vision.
+                delivers prayer room interior design solutions in Dubai tailored
+                to your spiritual needs, comfort, and design vision.
               </p>
 
               <div className="bg-[#8c6b1f] text-white text-xs sm:text-base font-play rounded px-6 py-4 mt-6 w-fit">
@@ -174,7 +178,7 @@ const SBody = () => {
 
             <div className="w-full lg:w-1/2 flex flex-col justify-center items-start space-y-6">
               <h2 className="text-xs sm:text-xl md:text-xl font-bold tracking-widest text-[#d4af37]">
-                Get Best Majlis Interior Design Services in Dubai
+                Get Best Prayer Room Interior Design Services in Dubai
               </h2>
 
               {!videoLoaded ? (
@@ -183,7 +187,7 @@ const SBody = () => {
                   onClick={() => setVideoLoaded(true)}
                 >
                   <Image
-                    src="/images/4.png"
+                    src="/images/WhatsApp Image 2026-03-03 at 12.30.29 PM.jpeg"
                     alt="Watch our company video"
                     width={1280}
                     height={720}
@@ -222,20 +226,29 @@ const SBody = () => {
       {/* Section 2 */}
       <section className="py-10 px-6 sm:px-10 md:px-16 lg:px-28 xl:px-40">
         <h2 className="text-center text-xs sm:text-xl md:text-xl font-bold tracking-widest mb-6 uppercase text-[#d4af37]">
-          Majlis Interior Design Dubai Services We Provide
+          Prayer Room Interior Design Dubai Services We Provide
         </h2>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-10">
-          {designImages.map((src, index) => (
-            <div key={index} className="relative aspect-square overflow-hidden">
+          {serviceCards.map((card, index) => (
+            <Link
+              key={index}
+              href={card.link}
+              className="group relative block aspect-square overflow-hidden rounded-lg"
+            >
               <Image
-                src={src}
-                alt={`service ${index + 1}`}
+                src={card.src}
+                alt={card.title}
                 width={600}
                 height={600}
-                className="object-cover w-full h-full"
+                className="object-cover w-full h-full transition-transform duration-300 group-hover:scale-105"
               />
-            </div>
+              <div className="absolute inset-0 bg-black/45 group-hover:bg-black/55 transition duration-300 flex items-center justify-center p-4">
+                <h3 className="text-white text-sm sm:text-base md:text-lg font-semibold text-center uppercase tracking-wider">
+                  {card.title}
+                </h3>
+              </div>
+            </Link>
           ))}
         </div>
 
@@ -278,68 +291,56 @@ const SBody = () => {
             >
               Rady Interior Design <span></span>
             </a>
-            for Your Majlis Interior Design in Dubai?
+            for Your Prayer Room Interior Design in Dubai?
           </h2>
 
           <div className="space-y-4 text-sm sm:text-base font-play text-left">
             <p>
               With years of experience in residential interior design,
-              <a
-                href="https://radyinterior.ae/"
-                className="ml-1"
-              >
+              <a href="https://radyinterior.ae/" className="ml-1">
                 Rady Interior Design & Fit Out <span></span>
               </a>
-              helps homeowners in Dubai create majlis interiors that feel elegant,
-              welcoming, and tailored to the traditions of guest hosting and
-              refined living.
+              helps homeowners in Dubai create prayer room interiors that feel
+              peaceful, elegant, and deeply personal.
             </p>
 
             <p>
-              A majlis should be more than just a formal sitting room. It should
-              reflect warmth, hospitality, comfort, and a strong sense of style
-              while remaining practical for gatherings and family occasions.
+              A prayer room should be more than just a quiet space. It should
+              support reflection, spiritual comfort, privacy, and calmness while
+              maintaining visual simplicity and refined interior balance.
             </p>
 
             <p>
-              We begin by understanding your hosting habits, seating preferences,
-              cultural style, layout requirements, and design taste so we can
-              create a majlis that truly matches your home and lifestyle.
+              We begin by understanding your spiritual routine, room size,
+              preferred atmosphere, material taste, and layout needs so we can
+              create a prayer room that truly supports peaceful daily worship.
             </p>
 
             <p>
-              From traditional majlis interiors to contemporary luxury majlis
-              spaces,
-              <a
-                href="https://radyinterior.ae/"
-                className="ml-1"
-              >
+              From compact prayer corners to dedicated home prayer rooms,
+              <a href="https://radyinterior.ae/" className="ml-1">
                 Rady Interior Design & Fit Out <span></span>
               </a>
-              creates tailored interiors that combine thoughtful planning, refined
-              materials, and carefully selected furnishings.
+              creates tailored interiors that combine thoughtful planning, soft
+              materials, and carefully selected details.
               <br />
               <br />
-              We thoughtfully choose seating layouts, wall treatments, carpets,
-              lighting, curtains, feature elements, and decorative details that
-              create visual harmony while maintaining comfort and elegance.
+              We thoughtfully choose carpets, lighting, wall treatments, shelving,
+              ceiling details, and decorative features that create visual harmony
+              while maintaining comfort, simplicity, and spiritual calmness.
               <br />
               <br />
-              Our team focuses on layout efficiency, cultural sensitivity, and
-              clean execution so the final majlis feels polished, luxurious, and
-              truly welcoming for guests.
+              Our team focuses on serenity, elegance, and clean execution so the
+              final prayer room feels polished, uplifting, and truly restful.
               <br />
               <br />
               When you choose
-              <a
-                href="https://radyinterior.ae/"
-                className="ml-1"
-              >
+              <a href="https://radyinterior.ae/" className="ml-1">
                 Rady Interior Design & Fit Out, <span></span>
               </a>
-              you choose a professional team dedicated to delivering majlis
-              interior design services in Dubai with quality, creativity, and
-              lasting sophistication.
+              you choose a professional team dedicated to delivering prayer room
+              interior design services in Dubai with quality, care, and spiritual
+              sensitivity.
             </p>
           </div>
         </div>
@@ -347,38 +348,32 @@ const SBody = () => {
         <div className="lg:max-w-[80%] mx-auto flex flex-col lg:flex-row items-start gap-6 mb-12">
           <div className="w-full lg:w-2/3 space-y-4">
             <h2 className="text-sm sm:text-xl md:text-xl tracking-widest font-conthrax text-[#d4af37]">
-              Our Dubai Majlis Design Projects
+              Our Dubai Prayer Room Design Projects
             </h2>
             <p className="text-sm sm:text-base">
-              <a
-                href="https://radyinterior.ae/"
-                className="ml-1"
-              >
+              <a href="https://radyinterior.ae/" className="ml-1">
                 Rady Interior Design & Fit Out, <span></span>
               </a>
-              works on residential interior projects in Dubai, including majlis
-              spaces designed for hospitality, comfort, and elegant social living.
+              works on residential interior projects in Dubai, including prayer
+              rooms designed for peace, comfort, and spiritual reflection.
             </p>
             <p className="text-sm sm:text-base">
-              Every majlis design project is planned with attention to seating
-              layout, guest flow, lighting, wall detailing, soft furnishings, and
-              the overall interior character of the home.
+              Every prayer room design project is planned with attention to room
+              calmness, simplicity, lighting, material softness, storage,
+              decorative restraint, and the overall atmosphere of the home.
             </p>
             <p className="text-sm sm:text-base">
               Clients trust
-              <a
-                href="https://radyinterior.ae/"
-                className="ml-1"
-              >
+              <a href="https://radyinterior.ae/" className="ml-1">
                 Rady Interior Design & Fit Out <span></span>
               </a>
-              to create majlis interiors that feel stylish, practical, and deeply
-              welcoming without compromising comfort or cultural elegance.
+              to create prayer room interiors that feel peaceful, practical, and
+              deeply comforting without compromising elegance.
             </p>
             <p className="text-sm sm:text-base">
-              From modern formal sitting rooms to more traditional and luxurious
-              majlis spaces, our work focuses on hospitality, personalization, and
-              premium finishing suited to homes in Dubai.
+              From minimal prayer corners to more luxurious dedicated prayer
+              spaces, our work focuses on serenity, personalization, and premium
+              finishing suited to homes in Dubai.
             </p>
           </div>
 
@@ -398,9 +393,7 @@ const SBody = () => {
               </div>
             </a>
           </div>
-        </div> 
-                  <h2 className="text-center text-xs sm:text-xl md:text-xl font-bold tracking-widest mb-6 uppercase text-[#d4af37]">
-      OUR MAJLIS INTERIOR DESIGN PROJECTS IN DUBAI</h2>
+        </div>
 
         <div className="lg:max-w-[60%] grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 max-w-6xl mx-auto mb-10">
           {galleryImages.map(({ src, link, title }, i) => (
@@ -452,83 +445,85 @@ const SBody = () => {
           </div>
         </div>
 
-        
-
         <div className="max-w-7xl mx-auto">
           <h2 className="text-center text-3xl font-conthrax py-12 text-[#d4af37]">
-            Bespoke Majlis Interior Design Dubai, Crafted for Hospitality and Elegance
+            Bespoke Prayer Room Interior Design Dubai, Crafted for Peace and Reflection
           </h2>
 
           <div className="grid md:grid-cols-2 gap-10 items-center mb-16">
             <div className="space-y-6 font-play">
               <h2 className="text-xl font-conthrax mb-4 text-[#d4af37]">
-                Our Majlis Interior Design Services in Dubai
+                Our Prayer Room Interior Design Services in Dubai
               </h2>
               <p>
-                Our majlis interior design services are tailored to improve
-                comfort, hospitality, and the overall appearance of your formal
-                gathering space. Whether you want a traditional Arabic majlis, a
-                luxury majlis, or a more modern formal sitting room, we design
-                according to your lifestyle and preferences.
+                Our prayer room interior design services are tailored to create
+                calm, elegant, and highly personal spiritual spaces that support
+                worship, reflection, and peace. Whether you want a compact prayer
+                corner or a dedicated prayer room, we design according to your
+                home and spiritual lifestyle.
               </p>
               <p>Our Featured Services:</p>
               <ul className="list-decimal pl-5 space-y-2">
                 <li>
                   <p className="font-play">
-                    <b>Majlis Layout Planning – </b>
-                    Smart space planning for comfortable guest seating, movement,
-                    and social gatherings
+                    <b>Prayer Room Layout Planning – </b>
+                    Thoughtful space planning for calm movement, comfort, and
+                    peaceful daily worship
                   </p>
                 </li>
 
                 <li>
                   <p className="font-play">
-                    <b>Seating & Furniture Design Coordination –</b> Functional and
-                    elegant seating arrangements tailored to your majlis style
+                    <b>Wall Features & Spiritual Interior Coordination –</b>
+                    Elegant design elements planned to support serenity and
+                    refined simplicity
                   </p>
                 </li>
 
                 <li>
                   <p className="font-play">
-                    <b>Wall Features & Joinery Design – </b>
-                    Well-balanced wall and custom joinery solutions that support
-                    both beauty and hospitality
+                    <b>Lighting, Carpets & Soft Interior Selection – </b>
+                    Carefully chosen finishes and materials that enhance peace,
+                    warmth, and comfort
                   </p>
                 </li>
 
                 <li>
                   <p className="font-play">
-                    <b>Lighting & Ceiling Design –</b> Layered and practical
-                    lighting solutions that enhance mood and majlis atmosphere
+                    <b>Shelving & Custom Joinery Solutions –</b> Functional and
+                    beautiful storage or display elements tailored to your prayer
+                    room needs
                   </p>
                 </li>
 
                 <li>
                   <p className="font-play">
-                    <b>Carpets, Curtains & Styling – </b>
-                    Carefully chosen textiles, finishes, and décor elements for a
-                    refined majlis look
+                    <b>Decorative Finishes & Calm Styling – </b>
+                    Refined details and styling choices that create a spiritually
+                    uplifting atmosphere
                   </p>
                 </li>
 
                 <li>
                   <p className="font-play">
-                    <b>Majlis Fit-Out & Installation –</b> Complete execution with
-                    careful detailing, joinery support, and final setup
+                    <b>Prayer Room Fit-Out & Installation –</b> Complete execution
+                    with careful detailing, elegant finishing, and final styling
+                    support
                   </p>
                 </li>
               </ul>
 
               <p>
-                We are among the trusted companies for majlis interior design in
-                Dubai, helping homeowners create spaces that feel elegant,
-                functional, and deeply welcoming for family and guests.
+                We are among the trusted companies for prayer room interior
+                design in Dubai, helping homeowners create spaces that feel
+                peaceful, functional, and beautifully tailored for worship and
+                reflection.
               </p>
             </div>
 
             <div className="rounded-lg overflow-hidden shadow-md">
               <Image
-                src="/images/2_CShading_LightMix (1).jpg"
+                src="/images/01_Post.jpg"
                 alt="Round luxury bed with fairy lights"
                 width={600}
                 height={400}
@@ -540,10 +535,10 @@ const SBody = () => {
 
         <div className="max-w-4xl mx-auto mt-16 mb-4 bg-[#141517] rounded-lg shadow p-6 sm:p-10">
           <h2 className="text-center text-2xl sm:text-3xl font-conthrax mb-4 text-[#d4af37]">
-            Majlis Interior Design Dubai – FAQs
+            Prayer Room Interior Design Dubai – FAQs
           </h2>
           <p className="font-play text-sm sm:text-base mb-6 text-center">
-            Find quick answers to common questions about our majlis interior
+            Find quick answers to common questions about our prayer room interior
             design services in Dubai.
           </p>
 

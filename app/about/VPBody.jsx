@@ -1,3 +1,6 @@
+"use client";
+
+import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -74,39 +77,58 @@ const generalFaqs = [
 const designWorks = [
   {
     title: "Luxury Living",
-    image: "/images/about/design-1.jpg",
+    image: "/images/29.webp",
     href: "/design-works/luxury-living",
   },
   {
     title: "Elegant Bedroom",
-    image: "/images/about/design-2.jpg",
+    image: "/images/30.webp",
     href: "/design-works/elegant-bedroom",
   },
   {
     title: "Warm Lounge",
-    image: "/images/about/design-3.jpg",
+    image: "/images/31.webp",
     href: "/design-works/warm-lounge",
   },
   {
     title: "Restaurant Interior",
-    image: "/images/about/design-4.jpg",
+    image: "/images/32.webp",
     href: "/design-works/restaurant-interior",
   },
 ];
 
 function AccordionItem({ question, answer }) {
+  const [open, setOpen] = useState(false);
+
   return (
-    <details className="group border-b border-[#d4a63d]/15 py-4">
-      <summary className="flex cursor-pointer list-none items-center justify-between gap-4 text-left text-base font-medium text-[#d4a63d] sm:text-lg">
+    <div className="border-b border-[#d4a63d]/15 py-4">
+      <button
+        type="button"
+        onClick={() => setOpen((prev) => !prev)}
+        className="flex w-full items-center justify-between gap-4 text-left text-base font-medium text-[#d4a63d] sm:text-lg"
+      >
         <span>{question}</span>
-        <span className="text-[#d4a63d] transition-transform duration-300 group-open:rotate-45">
+        <span
+          className={`text-[#d4a63d] transition-transform duration-300 ${
+            open ? "rotate-45" : ""
+          }`}
+        >
           +
         </span>
-      </summary>
-      <p className="pt-4 text-sm leading-7 text-white/70 sm:text-base">
-        {answer}
-      </p>
-    </details>
+      </button>
+
+      <div
+        className={`grid overflow-hidden transition-all duration-300 ease-in-out ${
+          open ? "grid-rows-[1fr] pt-4" : "grid-rows-[0fr]"
+        }`}
+      >
+        <div className="overflow-hidden">
+          <p className="text-sm leading-7 text-white/70 sm:text-base">
+            {answer}
+          </p>
+        </div>
+      </div>
+    </div>
   );
 }
 
@@ -114,21 +136,22 @@ export default function VBody() {
   return (
     <>
       {/* Intro */}
-      <section className="py-14 sm:py-16 lg:py-20">
+      <section className="py-12 sm:py-12 lg:py-12">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-5xl text-center">
-            <h2 className="text-2xl font-semibold text-white sm:text-3xl lg:text-4xl">
+            <h2 className="text-2xl font-semibold text-white sm:text-3xl lg:text-2xl">
               Leading Interior Design & Fit-Out Company In Dubai, UAE
             </h2>
 
             <div className="mt-6 space-y-5 text-sm leading-7 text-white/70 sm:text-base">
               <p>
                 RadyInterior is recognized as one of the top interior design
-                companies in Dubai, known for delivering high-quality, efficient,
-                and detail-driven interior design solutions across the UAE. Our
-                approach blends creativity, strategic planning, and technical
-                expertise, making us a trusted choice for clients seeking luxury
-                interiors, functional layouts, and exceptional design outcomes.
+                companies in Dubai, known for delivering high-quality,
+                efficient, and detail-driven interior design solutions across
+                the UAE. Our approach blends creativity, strategic planning, and
+                technical expertise, making us a trusted choice for clients
+                seeking luxury interiors, functional layouts, and exceptional
+                design outcomes.
               </p>
 
               <p>
@@ -230,7 +253,7 @@ export default function VBody() {
           <div className="overflow-hidden rounded-md border border-[#d4a63d]/10 bg-neutral-900">
             <div className="relative aspect-[4/3] w-full">
               <Image
-                src="/images/about/founder.jpg"
+                src="/images/ceo.webp"
                 alt="Mohammad Rady at RadyInterior office"
                 fill
                 className="object-cover"
@@ -247,7 +270,8 @@ export default function VBody() {
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h2 className="text-2xl font-semibold text-[#d4a63d] sm:text-3xl lg:text-4xl">
-              What Makes RadyInterior One Of The Top Interior Design Companies In Dubai And The UAE?
+              What Makes RadyInterior One Of The Top Interior Design Companies
+              In Dubai And The UAE?
             </h2>
             <p className="mx-auto mt-4 max-w-4xl text-sm leading-7 text-white/70 sm:text-base">
               RadyInterior stands out for its ability to blend creativity,
@@ -260,7 +284,7 @@ export default function VBody() {
             <div className="overflow-hidden rounded-md border border-[#d4a63d]/10 bg-neutral-900">
               <div className="relative aspect-[4/3.4] w-full">
                 <Image
-                  src="/images/about/why-us.jpg"
+                  src="/images/office-interior.webp"
                   alt="Luxury office interior design by RadyInterior"
                   fill
                   className="object-cover"
@@ -304,7 +328,7 @@ export default function VBody() {
             <div className="overflow-hidden rounded-md border border-[#d4a63d]/10 bg-neutral-900">
               <div className="relative aspect-[4/3.2] w-full">
                 <Image
-                  src="/images/about/sidebar-main.jpg"
+                  src="/images/28.webp"
                   alt="Luxury design work showcase"
                   fill
                   className="object-cover"

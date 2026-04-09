@@ -1,7 +1,7 @@
 import '../globals.css';
 
 export const metadata = {
-  title: "Zaheya Gardens Interior Fit Out | RadyInterior",
+  title: "About RadyInterior – Leading Interior Design & Fit-Out in Dubai",
   description:
     "Royal Atlantis 2-bedroom apartment interior design in Dubai with bespoke fit-out & modern styles. Book your design today!",
   metadataBase: new URL('https://wedointerior.ae/'),

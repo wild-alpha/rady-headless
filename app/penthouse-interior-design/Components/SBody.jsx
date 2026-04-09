@@ -5,10 +5,22 @@ import Link from "next/link";
 import { useState } from "react";
 import { FaPlay } from "react-icons/fa";
 
-const designImages = [
-  "/images/penthouse-living-room.jpg",
-  "/images/penthouse-dining-area.jpg",
-  "/images/penthouse-tv-lounge.jpg",
+const serviceCards = [
+  {
+    src: "/images/penthouse-living-room.jpg",
+    link: "/luxury-penthouse-interior-design",
+    title: "Luxury Penthouse Interior Design",
+  },
+  {
+    src: "/images/penthouse-dining-area.jpg",
+    link: "/modern-penthouse-design-dubai",
+    title: "Modern Penthouse Design",
+  },
+  {
+    src: "/images/penthouse-tv-lounge.jpg",
+    link: "/penthouse-fit-out-dubai",
+    title: "Penthouse Fit Out Dubai",
+  },
 ];
 
 const textImage = {
@@ -227,17 +239,26 @@ const SBody = () => {
         </h2>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-10">
-          {designImages.map((src, index) => (
-            <div key={index} className="relative aspect-square overflow-hidden">
-              <Image
-                src={src}
-                alt={`service ${index + 1}`}
-                width={600}
-                height={600}
-                className="object-cover w-full h-full"
-              />
-            </div>
-          ))}
+          {serviceCards.map((card, index) => (
+  <Link
+    key={index}
+    href={card.link}
+    className="group relative block aspect-square overflow-hidden rounded-lg"
+  >
+    <Image
+      src={card.src}
+      alt={card.title}
+      width={600}
+      height={600}
+      className="object-cover w-full h-full transition-transform duration-300 group-hover:scale-105"
+    />
+    <div className="absolute inset-0 bg-black/45 group-hover:bg-black/55 transition duration-300 flex items-center justify-center p-4">
+      <h3 className="text-white text-sm sm:text-base md:text-lg font-semibold text-center uppercase tracking-wider">
+        {card.title}
+      </h3>
+    </div>
+  </Link>
+))}
         </div>
 
         <div className="w-screen ml-[calc(50%-50vw)] bg-[#f5ede5] py-10 text-center space-y-4">

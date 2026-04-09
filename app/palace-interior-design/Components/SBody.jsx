@@ -5,10 +5,22 @@ import Link from "next/link";
 import { useState } from "react";
 import { FaPlay } from "react-icons/fa";
 
-const designImages = [
-  "/images/palace-sofa-side-decor.jpg",
-  "/images/palace-bedroom-interior-design.jpg",
-  "/images/working-table-interior-in-palace.jpg",
+const serviceCards = [
+  {
+    src: "/images/palace-sofa-side-decor.jpg",
+    link: "/classic-villa-interior-design",
+    title: "Classic Villa Interior Design",
+  },
+  {
+    src: "/images/palace-bedroom-interior-design.jpg",
+    link: "/villa-lantana",
+    title: "Villa Lantana",
+  },
+  {
+    src: "/images/working-table-interior-in-palace.jpg",
+    link: "/villa-khawaneej",
+    title: "Villa Khawaneej",
+  },
 ];
 
 const textImage = {
@@ -37,8 +49,6 @@ const galleryImages = [
     title: "PALM JUMEIRAH VILLA",
   },
 ];
-
-
 
 const faqs = [
   {
@@ -79,25 +89,19 @@ const SBody = () => {
           <div className="flex flex-col lg:flex-row gap-12">
             <div className="w-full lg:w-1/2 flex flex-col justify-start">
               <h2 className="text-sm sm:text-xl md:text-xl font-bold tracking-widest py-2 text-[#d4af37]">
-              Palace interior design Dubai
+                Palace interior design Dubai
               </h2>
 
               <p className="text-sm sm:text-base leading-7 mb-4">
                 Are you looking for
-                <a
-                  href="https://radyinterior.ae/"
-                  className=" ml-1"
-                >
+                <a href="https://radyinterior.ae/" className=" ml-1">
                   palace interior design services in Dubai <span></span>
                 </a>
                 that reflect grandeur, prestige, and timeless luxury. You are at
                 the right place.
                 <br />
                 With 15+ years of experience in luxury interior design and fit-out,
-                <a
-                  href="https://radyinterior.ae/"
-                  className="ml-1"
-                >
+                <a href="https://radyinterior.ae/" className="ml-1">
                   Rady Interior Design & Fit Out, <span></span>
                 </a>
                 creates palace interiors that combine architectural magnificence,
@@ -108,10 +112,7 @@ const SBody = () => {
                 royal residence, our team helps shape interiors that feel majestic,
                 elegant, and deeply tailored to your lifestyle and cultural
                 preferences. Keep reading to discover how
-                <a
-                  href="https://radyinterior.ae/"
-                  className="ml-1"
-                >
+                <a href="https://radyinterior.ae/" className="ml-1">
                   Rady Interior Design & Fit Out, <span></span>
                 </a>
                 delivers palace interior design solutions in Dubai designed for
@@ -177,16 +178,25 @@ const SBody = () => {
         </h2>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-10">
-          {designImages.map((src, index) => (
-            <div key={index} className="relative aspect-square overflow-hidden">
+          {serviceCards.map((card, index) => (
+            <Link
+              key={index}
+              href={card.link}
+              className="group relative block aspect-[4/4] overflow-hidden rounded-lg"
+            >
               <Image
-                src={src}
-                alt={`service ${index + 1}`}
+                src={card.src}
+                alt={card.title}
                 width={600}
                 height={600}
-                className="object-cover w-full h-full"
+                className="object-cover w-full h-full transition-transform duration-300 group-hover:scale-105"
               />
-            </div>
+              <div className="absolute inset-0 bg-black/45 group-hover:bg-black/55 transition duration-300 flex items-center justify-center p-4">
+                <h3 className="text-white text-sm sm:text-base md:text-lg font-semibold text-center uppercase tracking-wider">
+                  {card.title}
+                </h3>
+              </div>
+            </Link>
           ))}
         </div>
 
@@ -235,10 +245,7 @@ const SBody = () => {
           <div className="space-y-4 text-sm sm:text-base font-play text-left">
             <p>
               With years of experience in luxury residential design,
-              <a
-                href="https://radyinterior.ae/"
-                className="ml-1"
-              >
+              <a href="https://radyinterior.ae/" className="ml-1">
                 Rady Interior Design & Fit Out <span></span>
               </a>
               helps clients in Dubai create palace interiors that feel grand,
@@ -262,10 +269,7 @@ const SBody = () => {
             <p>
               From formal majlis areas and grand entrances to suites, lounges,
               dining spaces, corridors, and statement interiors,
-              <a
-                href="https://radyinterior.ae/"
-                className="ml-1"
-              >
+              <a href="https://radyinterior.ae/" className="ml-1">
                 Rady Interior Design & Fit Out <span></span>
               </a>
               develops palace interiors that balance magnificence, comfort, and
@@ -284,10 +288,7 @@ const SBody = () => {
               <br />
               <br />
               When you choose
-              <a
-                href="https://radyinterior.ae/"
-                className="ml-1"
-              >
+              <a href="https://radyinterior.ae/" className="ml-1">
                 Rady Interior Design & Fit Out, <span></span>
               </a>
               you choose a professional team dedicated to delivering palace
@@ -303,10 +304,7 @@ const SBody = () => {
               Our Dubai Palace Interior Projects
             </h2>
             <p className="text-sm sm:text-base">
-              <a
-                href="https://radyinterior.ae/"
-                className="ml-1"
-              >
+              <a href="https://radyinterior.ae/" className="ml-1">
                 Rady Interior Design & Fit Out, <span></span>
               </a>
               works on high-end residential interior projects in Dubai, including
@@ -321,10 +319,7 @@ const SBody = () => {
             </p>
             <p className="text-sm sm:text-base">
               Clients trust
-              <a
-                href="https://radyinterior.ae/"
-                className="ml-1"
-              >
+              <a href="https://radyinterior.ae/" className="ml-1">
                 Rady Interior Design & Fit Out <span></span>
               </a>
               to create palace interiors that feel majestic, practical, and
@@ -355,7 +350,7 @@ const SBody = () => {
             </a>
           </div>
         </div>
-       
+
         <div className="w-screen ml-[calc(50%-50vw)] bg-[#f5ede5] py-10 text-center space-y-4">
           <h3 className="text-xs sm:text-xl font-conthrax uppercase text-[#d4af37]">
             Get In Touch With Us
@@ -382,8 +377,6 @@ const SBody = () => {
             </a>
           </div>
         </div>
-
-       
 
         <div className="max-w-7xl mx-auto">
           <h2 className="text-center text-3xl font-conthrax py-12 text-[#d4af37]">

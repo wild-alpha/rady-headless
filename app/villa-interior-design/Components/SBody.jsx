@@ -5,10 +5,22 @@ import Link from "next/link";
 import { useState } from "react";
 import { FaPlay } from "react-icons/fa";
 
-const designImages = [
-  "/images/luxury-villa-interior-design-dubai.jpg",
-  "/images/contemporary-villa-bedroom-interior-dubai.jpg",
-  "/images/modern-villa-living-room-design-dubai.jpg",
+const serviceCards = [
+  {
+    src: "/images/luxury-villa-interior-design-dubai.jpg",
+    link: "/classic-villa-interior-design",
+    title: "Classic Villa Interior Design",
+  },
+  {
+    src: "/images/contemporary-villa-bedroom-interior-dubai.jpg",
+    link: "/emirates-hills-villa",
+    title: "Emirates Hills Villa",
+  },
+  {
+    src: "/images/modern-villa-living-room-design-dubai.jpg",
+    link: "/district-1-mbr-city-contemporary-villa",
+    title: "District One MBR Villa",
+  },
 ];
 
 const textImage = {
@@ -28,24 +40,24 @@ const galleryImages = [
     link: "/classic-villa-interior-design",
     title: "EMIRATES HILLS VILLA",
   },
-  
-{
+
+  {
     src: "/images/vservice2.webp",
     link: "/classic-villa-interior-design",
     title: "PALM JUMEIRAH VILLA",
   },
-    {
+  {
     src: "/images/vservice1.webp",
     link: "/emirates-hills-villa",
     title: "DISTRICT ONE MBR VILLA",
   },
-{
+  {
     src: "/images/vservice2.webp",
     link: "/classic-villa-interior-design",
     title: "DUBAI HILLS ESTATE VILLA",
   },
-    
-    {
+
+  {
     src: "/images/vservice2.webp",
     link: "/classic-villa-interior-design",
     title: "AL BARARI VILLA",
@@ -135,22 +147,16 @@ const SBody = () => {
 
               <p className="text-sm sm:text-base leading-7 mb-4">
                 Are you looking for
-                <a
-                  href="https://radyinterior.ae/"
-                  className=" ml-1"
-                >
-                  premium villa interior design services in Dubai <span></span> 
+                <a href="https://radyinterior.ae/" className=" ml-1">
+                  premium villa interior design services in Dubai <span></span>
                 </a>
-                  that reflect ease of living and a luxury lifestyle. You are on right
+                that reflect ease of living and a luxury lifestyle. You are on right
                 spot.
                 <br />
                 From the founders having 15+ years of experience transforming
                 living spaces into premium livings especially villas in Dubai's most
                 high end communities,
-                <a
-                  href="https://radyinterior.ae/"
-                  className="ml-1"
-                >
+                <a href="https://radyinterior.ae/" className="ml-1">
                   Rady Interior Design & Fit Out, <span></span>
                 </a>
                 crafts creative originality and upscale your villa from vision to a
@@ -159,10 +165,7 @@ const SBody = () => {
                 Our vision showcase contemporary and modern luxury with functional
                 living to create specific spaces that feel you exclusive, polished
                 and personal. Keep reading to unfold that
-                <a
-                  href="https://radyinterior.ae/"
-                  className="ml-1"
-                >
+                <a href="https://radyinterior.ae/" className="ml-1">
                   Rady Interior Design & Fit Out, <span></span>
                 </a>
                 how to craft your Dubai villa into a living reality from your
@@ -228,16 +231,25 @@ const SBody = () => {
         </h2>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-10">
-          {designImages.map((src, index) => (
-            <div key={index} className="relative aspect-square overflow-hidden">
+          {serviceCards.map((card, index) => (
+            <Link
+              key={index}
+              href={card.link}
+              className="group relative block aspect-square overflow-hidden rounded-lg"
+            >
               <Image
-                src={src}
-                alt={`service ${index + 1}`}
+                src={card.src}
+                alt={card.title}
                 width={600}
                 height={600}
-                className="object-cover w-full h-full"
+                className="object-cover w-full h-full transition-transform duration-300 group-hover:scale-105"
               />
-            </div>
+              <div className="absolute inset-0 bg-black/45 group-hover:bg-black/55 transition duration-300 flex items-center justify-center p-4">
+                <h3 className="text-white text-sm sm:text-base md:text-lg font-semibold text-center uppercase tracking-wider">
+                  {card.title}
+                </h3>
+              </div>
+            </Link>
           ))}
         </div>
 
@@ -287,10 +299,7 @@ const SBody = () => {
             <p>
               With the credible background and 15+ years of experience from the
               founders,
-              <a
-                href="https://radyinterior.ae/"
-                className="ml-1"
-              >
+              <a href="https://radyinterior.ae/" className="ml-1">
                 Rady Interior Design & Fit Out <span></span>
               </a>
               has unique position of trust from the homeowners, developers and
@@ -299,10 +308,7 @@ const SBody = () => {
             </p>
 
             <p>
-              <a
-                href="https://radyinterior.ae/"
-                className="ml-1"
-              >
+              <a href="https://radyinterior.ae/" className="ml-1">
                 Rady Interior Design & Fit Out <span></span>
               </a>
               built many projects in Dubai Marina, Palm Jumeirah, Emirates Hills,
@@ -321,10 +327,7 @@ const SBody = () => {
               This step secures that the concept we built is on the basis of
               client's thoughts, meaningful and bespoke. Opposite the studio
               apartments that depends on pre-defined design for all.
-              <a
-                href="https://radyinterior.ae/"
-                className="ml-1"
-              >
+              <a href="https://radyinterior.ae/" className="ml-1">
                 Rady Interior Design & Fit Out <span></span>
               </a>
               creates your villa from ground level to up precisely, enables your
@@ -333,10 +336,7 @@ const SBody = () => {
               <br />
               <br />
               R&D department of
-              <a
-                href="https://radyinterior.ae/"
-                className="ml-1"
-              >
+              <a href="https://radyinterior.ae/" className="ml-1">
                 Rady Interior Design & Fit Out <span></span>
               </a>
               continuously works to explore latest global trends, fine and premium
@@ -350,10 +350,7 @@ const SBody = () => {
               are committed to responsible and future-focused practices.
               <br />
               <br />
-              <a
-                href="https://radyinterior.ae/"
-                className="ml-1"
-              >
+              <a href="https://radyinterior.ae/" className="ml-1">
                 Rady Interior Design & Fit Out <span></span>
               </a>
               a modern interior design studio, where we focus on premium but
@@ -363,10 +360,7 @@ const SBody = () => {
               <br />
               <br />
               While choosing
-              <a
-                href="https://radyinterior.ae/"
-                className="ml-1"
-              >
+              <a href="https://radyinterior.ae/" className="ml-1">
                 Rady Interior Design & Fit Out, <span></span>
               </a>
               actually you are choosing an efficient team of professionals which
@@ -381,10 +375,7 @@ const SBody = () => {
               Our Dubai Villa Projects
             </h2>
             <p className="text-sm sm:text-base">
-              <a
-                href="https://radyinterior.ae/"
-                className="ml-1"
-              >
+              <a href="https://radyinterior.ae/" className="ml-1">
                 Rady Interior Design & Fit Out, <span></span>
               </a>
               completed many signature projects in Dubai's high end living
@@ -398,10 +389,7 @@ const SBody = () => {
             </p>
             <p className="text-sm sm:text-base">
               Villa owners approached us with clear brief: Team
-              <a
-                href="https://radyinterior.ae/"
-                className="ml-1"
-              >
+              <a href="https://radyinterior.ae/" className="ml-1">
                 Rady Interior Design & Fit Out! <span></span>
               </a>
               develop interiors that is aligned with refined luxury and something
@@ -414,7 +402,7 @@ const SBody = () => {
               perfect home aligned with Dubai's luxury lifestyle.
             </p>
           </div>
-           
+
           <div className="w-full lg:w-1/3 group relative overflow-hidden rounded-lg shadow-lg">
             <a href={textImage.link} className="block">
               <Image
@@ -432,8 +420,10 @@ const SBody = () => {
             </a>
           </div>
         </div>
-          <h2 className="text-center text-xs sm:text-xl md:text-xl font-bold tracking-widest mb-6 uppercase text-[#d4af37]">
-            OUR VILLA INTERIOR DESIGN PROJECTS IN DUBAI</h2>
+
+        <h2 className="text-center text-xs sm:text-xl md:text-xl font-bold tracking-widest mb-6 uppercase text-[#d4af37]">
+          OUR VILLA INTERIOR DESIGN PROJECTS IN DUBAI
+        </h2>
         <div className="lg:max-w-[60%] grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 max-w-6xl mx-auto mb-10">
           {galleryImages.map(({ src, link, title }, i) => (
             <a
@@ -483,8 +473,6 @@ const SBody = () => {
             </a>
           </div>
         </div>
-
-       
 
         <div className="max-w-7xl mx-auto">
           <h2 className="text-center text-3xl font-conthrax py-12 text-[#d4af37]">

@@ -5,10 +5,22 @@ import Link from "next/link";
 import { useState } from "react";
 import { FaPlay } from "react-icons/fa";
 
-const designImages = [
-  "/images/salon-interior-design-dubai.jpg",
-  "/images/beauty-salon-dubai.jpg",
-   "/images/mood-beauty-salon.jpg",
+const serviceCards = [
+  {
+    src: "/images/salon-interior-design-dubai.jpg",
+    link: "/beauty-salon-interior-design-dubai",
+    title: "Beauty Salon Interior Design",
+  },
+  {
+    src: "/images/beauty-salon-dubai.jpg",
+    link: "/beauty-salon-fit-out-dubai",
+    title: "Beauty Salon Fit Out Dubai",
+  },
+  {
+    src: "/images/mood-beauty-salon.jpg",
+    link: "/modern-beauty-salon-design-dubai",
+    title: "Modern Beauty Salon Design",
+  },
 ];
 
 const textImage = {
@@ -50,8 +62,6 @@ const galleryImages = [
   },
 ];
 
-
-
 const faqs = [
   {
     question: "How long does a beauty salon interior design project in Dubai usually take?",
@@ -91,7 +101,7 @@ const SBody = () => {
           <div className="flex flex-col lg:flex-row gap-12">
             <div className="w-full lg:w-1/2 flex flex-col justify-start">
               <h2 className="text-sm sm:text-xl md:text-xl font-bold tracking-widest py-2 text-[#d4af37]">
-               Beauty salon Design services in Dubai
+                Beauty salon Design services in Dubai
               </h2>
 
               <p className="text-sm sm:text-base leading-7 mb-4">
@@ -188,16 +198,25 @@ const SBody = () => {
         </h2>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-10">
-          {designImages.map((src, index) => (
-            <div key={index} className="relative aspect-square overflow-hidden">
+          {serviceCards.map((card, index) => (
+            <Link
+              key={index}
+              href={card.link}
+              className="group relative block aspect-square overflow-hidden rounded-lg"
+            >
               <Image
-                src={src}
-                alt={`service ${index + 1}`}
+                src={card.src}
+                alt={card.title}
                 width={600}
                 height={600}
-                className="object-cover w-full h-full"
+                className="object-cover w-full h-full transition-transform duration-300 group-hover:scale-105"
               />
-            </div>
+              <div className="absolute inset-0 bg-black/45 group-hover:bg-black/55 transition duration-300 flex items-center justify-center p-4">
+                <h3 className="text-white text-sm sm:text-base md:text-lg font-semibold text-center uppercase tracking-wider">
+                  {card.title}
+                </h3>
+              </div>
+            </Link>
           ))}
         </div>
 
@@ -414,7 +433,6 @@ const SBody = () => {
           </div>
         </div>
 
-     
         <div className="max-w-7xl mx-auto">
           <h2 className="text-center text-3xl font-conthrax py-12 text-[#d4af37]">
             Bespoke Beauty Salon Interior Design Dubai, Crafted for Client Experience

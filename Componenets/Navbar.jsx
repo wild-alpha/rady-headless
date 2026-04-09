@@ -15,11 +15,6 @@ import { HiOutlineChevronDown, HiOutlineChevronRight } from "react-icons/hi";
 
 const navLinks = [
   {
-    name: "HOME",
-    href: "/",
-    dropdown: [],
-  },
-  {
     name: "ABOUT US",
     href: "/about",
     dropdown: [
@@ -29,87 +24,36 @@ const navLinks = [
   },
   {
     name: "DESIGN SERVICES",
-    href: "/design-services",
-     dropdown: [
-      {
-        name: "PALACE INTERIOR DESIGN",
-        href: "/palace-interior-design",
-      },
-      {
-        name: "VILLA INTERIOR DESIGN",
-        href: "/villa-interior-design",
-      },
-      {
-        name: "APARTMENT INTERIOR DESIGN",
-        href: "/apartment-interior-design",
-      },
-      {
-        name: "PENTHOUSE INTERIOR DESIGN",
-        href: "/penthouse-interior-design",
-      },
+    href: "/",
+    dropdown: [
+      { name: "PALACE INTERIOR DESIGN", href: "/palace-interior-design" },
+      { name: "VILLA INTERIOR DESIGN", href: "/villa-interior-design" },
+      { name: "APARTMENT INTERIOR DESIGN", href: "/apartment-interior-design" },
+      { name: "PENTHOUSE INTERIOR DESIGN", href: "/penthouse-interior-design" },
       { name: "RESTAURANT DESIGN", href: "/restaurant-design" },
-      {
-        name: "CAFE INTERIOR DESIGN",
-        href: "/cafe-interior-design",
-      },
-      {
-        name: "OFFICE INTERIOR DESIGN",
-        href: "/office-interior-design",
-      },
-      {
-        name: "BEAUTY SALON DESIGN",
-        href: "/beauty-salon-design",
-      },
-      {
-        name: "RETAIL INTERIOR DESIGN",
-        href: "/retail-interior-design",
-      },
+      { name: "CAFE INTERIOR DESIGN", href: "/cafe-interior-design" },
+      { name: "OFFICE INTERIOR DESIGN", href: "/office-interior-design" },
+      { name: "BEAUTY SALON DESIGN", href: "/beauty-salon-design" },
+      { name: "RETAIL INTERIOR DESIGN", href: "/retail-interior-design" },
       { name: "EXTERIOR DESIGN", href: "/exterior-design" },
-      {
-        name: "PUBLIC SPACE DESIGN",
-        href: "/public-space-design",
-      },
-      {
-        name: "GYM INTERIOR DESIGN",
-        href: "/gym-interior-design",
-      },
-      {
-        name: "PRAYER ROOM INTERIOR DESIGN",
-        href: "/prayer-room-interior-design",
-      },
-      {
-        name: "MAJLIS INTERIOR DESIGN",
-        href: "/majlis-interior-design",
-      },
-      {
-        name: "LIVING ROOM DESIGN",
-        href: "/living-room-design",
-      },
+      { name: "PUBLIC SPACE DESIGN", href: "/public-space-design" },
+      { name: "GYM INTERIOR DESIGN", href: "/gym-interior-design" },
+      { name: "PRAYER ROOM INTERIOR DESIGN", href: "/prayer-room-interior-design" },
+      { name: "MAJLIS INTERIOR DESIGN", href: "/majlis-interior-design" },
+      { name: "LIVING ROOM DESIGN", href: "/living-room-design" },
       { name: "BEDROOM DESIGN", href: "/bedroom-design" },
-      {
-        name: "DRESSING ROOM DESIGN",
-        href: "/dressing-room-design",
-      },
+      { name: "DRESSING ROOM DESIGN", href: "/dressing-room-design" },
       { name: "KIDS ROOM DESIGN", href: "/kids-room-design" },
-      {
-        name: "SWIMMING POOL DESIGN",
-        href: "/swimming-pool-design",
-      },
-      {
-        name: "SAUNA AND HAMMAM DESIGN",
-        href: "/sauna-and-hammam-design",
-      },
-      {
-        name: "KITCHEN INTERIOR DESIGN",
-        href: "/kitchen-interior-design",
-      },
+      { name: "SWIMMING POOL DESIGN", href: "/swimming-pool-design" },
+      { name: "SAUNA AND HAMMAM DESIGN", href: "/sauna-and-hammam-design" },
+      { name: "KITCHEN INTERIOR DESIGN", href: "/kitchen-interior-design" },
       { name: "BATHROOM DESIGN", href: "/bathroom-design" },
     ],
   },
   {
     name: "FIT OUT WORKS",
     href: "/fit-out-works",
-     dropdown: [
+    dropdown: [
       { name: "COMMERCIAL FIT-OUT", href: "/commercial-fit-out" },
       { name: "OFFICE FIT-OUT", href: "/office-fit-out" },
       { name: "RESTAURANT FIT-OUT", href: "/restaurant-fit-out" },
@@ -121,13 +65,10 @@ const navLinks = [
   },
   {
     name: "RENOVATION",
-    href: "/renovation",
+    href: "/",
     dropdown: [
       { name: "VILLA RENOVATION", href: "/villa-renovation" },
-      {
-        name: "APARTMENT RENOVATION",
-        href: "/apartment-renovation",
-      },
+      { name: "APARTMENT RENOVATION", href: "/apartment-renovation" },
       { name: "OFFICE RENOVATION", href: "/office-renovation" },
       { name: "KITCHEN RENOVATION", href: "/kitchen-renovation" },
       { name: "BATHROOM RENOVATION", href: "/bathroom-renovation" },
@@ -138,18 +79,19 @@ const navLinks = [
     name: "AREAS WE SERVE",
     href: "/areas-we-serve",
     dropdown: [
-      { name: "DUBAI", href: "/areas-we-serve" },
-      { name: "SHARJAH", href: "/areas-we-serve" },
-      { name: "AJMAN", href: "/areas-we-serve" },
-      { name: "UMM AL QUWAIN", href: "/areas-we-serve" },
-      { name: "RAS AL KHAIMAH", href: "/areas-we-serve" },
-      { name: "FUJAIRAH", href: "/areas-we-serve" },
+      { name: "DUBAI", href: "/areas-we-serve?category=dubai" },
+      { name: "SHARJAH", href: "/areas-we-serve?category=sharjah" },
+      { name: "AJMAN", href: "/areas-we-serve?category=ajman" },
+      { name: "UMM AL QUWAIN", href: "/areas-we-serve?category=umm%20al%20quwain" },
+      { name: "RAS AL KHAIMAH", href: "/areas-we-serve?category=ras%20al%20khaimah" },
+      /*{ name: "ABU DHABI", href: "/areas-we-serve?category=abudhabi" },*/
+      { name: "FUJAIRAH", href: "/areas-we-serve?category=fujairah" },
     ],
   },
   {
     name: "LANDSCAPE",
     href: "/landscape",
-     dropdown: [
+    dropdown: [
       { name: "LANDSCAPE SERVICES", href: "/" },
       { name: "OUTDOOR KITCHENS", href: "/outdoor-kitchens" },
       { name: "BARBECUE (BBQ) AREAS", href: "/barbecue" },
@@ -167,9 +109,8 @@ const navLinks = [
     name: "CONTACT US",
     href: "/contact",
     dropdown: [
-      { name: "CONTACT DETAILS", href: "/contact" },
-      { name: "LOCATION MAP", href: "/contact/location" },
-      { name: "REQUEST A QUOTE", href: "/contact/request-quote" },
+      { name: "CONTACT US", href: "/contact" },
+      { name: "BLOGS", href: "/blog" },
     ],
   },
 ];
@@ -187,6 +128,10 @@ export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [openMobileDropdown, setOpenMobileDropdown] = useState(null);
   const [showStickyNavbar, setShowStickyNavbar] = useState(false);
+
+  const middleIndex = Math.ceil(navLinks.length / 2);
+  const leftNavLinks = navLinks.slice(0, middleIndex);
+  const rightNavLinks = navLinks.slice(middleIndex);
 
   const toggleMobileDropdown = (name) => {
     setOpenMobileDropdown((prev) => (prev === name ? null : name));
@@ -212,6 +157,51 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const renderDesktopDropdown = (link) => (
+    <div className="absolute left-0 top-full pt-4">
+      <div className="inline-block bg-black/95 px-4 py-4 shadow-[0_20px_60px_rgba(0,0,0,0.45)] backdrop-blur-md">
+        <div className="flex max-h-[70vh] min-w-[300px] max-w-[360px] flex-col gap-3 overflow-y-auto pr-2">
+          {link.dropdown.map((item) => (
+            <Link
+              key={item.name}
+              href={item.href}
+              className="group/item flex items-center justify-between gap-5 whitespace-nowrap font-roboto text-[13px] uppercase text-white/90 transition hover:text-[#d4af37]"
+            >
+              <span>{item.name}</span>
+              <HiOutlineChevronRight className="text-[16px] text-[#d4af37] opacity-0 transition group-hover/item:opacity-100" />
+            </Link>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+
+  const renderDesktopNavItems = (links, align = "left") =>
+    links.map((link, index) => (
+      <div
+        key={link.name}
+        className="group relative flex min-w-0 items-center"
+        onMouseEnter={() => setActiveDesktopDropdown(link.name)}
+        onMouseLeave={() => setActiveDesktopDropdown(null)}
+      >
+        <Link
+          href={link.href}
+          className="relative inline-flex whitespace-nowrap px-3 pb-2 font-roboto text-[11px] font-medium tracking-[1.2px] text-white transition-colors duration-300 hover:text-[#d4af37] 2xl:px-5 2xl:text-[12px]"
+        >
+          <span>{link.name}</span>
+          <span className="pointer-events-none absolute bottom-0 left-0 h-[2px] w-full origin-left scale-x-0 bg-[#d4af37] transition-transform duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-x-100" />
+        </Link>
+
+        {index !== links.length - 1 && (
+          <span className="h-9 w-px shrink-0 bg-white/20" />
+        )}
+
+        {link.dropdown?.length > 0 &&
+          activeDesktopDropdown === link.name &&
+          renderDesktopDropdown(link)}
+      </div>
+    ));
+
   const renderDesktopNav = (isSticky = false) => (
     <div
       className={`hidden xl:block ${
@@ -220,7 +210,7 @@ export default function Navbar() {
     >
       {!isSticky && (
         <>
-          <div className="px-[72px] 2xl:px-20 py-2">
+          <div className="px-[72px] py-2 2xl:px-20">
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-6 2xl:gap-10">
                 <a
@@ -297,46 +287,7 @@ export default function Navbar() {
       >
         <div className="grid grid-cols-[1fr_auto_1fr] items-center">
           <nav className="flex min-w-0 items-center justify-start">
-            {navLinks.slice(0, 5).map((link, index) => (
-              <div
-                key={link.name}
-                className="group relative flex min-w-0 items-center"
-                onMouseEnter={() => setActiveDesktopDropdown(link.name)}
-                onMouseLeave={() => setActiveDesktopDropdown(null)}
-              >
-                <Link
-                  href={link.href}
-                  className="relative inline-flex whitespace-nowrap px-3 pb-2 2xl:px-5 font-roboto text-[11px] font-medium tracking-[1.2px] text-white transition-colors duration-300 hover:text-[#d4af37] 2xl:text-[12px]"
-                >
-                  <span>{link.name}</span>
-                  <span className="pointer-events-none absolute bottom-0 left-0 h-[2px] w-full origin-left scale-x-0 bg-[#d4af37] transition-transform duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-x-100" />
-                </Link>
-
-                {index !== 4 && (
-                  <span className="h-9 w-px shrink-0 bg-white/20" />
-                )}
-
-                {link.dropdown?.length > 0 &&
-                  activeDesktopDropdown === link.name && (
-                    <div className="absolute left-0 top-full pt-4">
-                      <div className="inline-block bg-black/95 px-4 py-4 shadow-[0_20px_60px_rgba(0,0,0,0.45)] backdrop-blur-md">
-                        <div className="flex min-w-max flex-col gap-3">
-                          {link.dropdown.map((item) => (
-                            <Link
-                              key={item.name}
-                              href={item.href}
-                              className="group/item flex items-center justify-between gap-5 whitespace-nowrap font-roboto text-[13px] uppercase text-white/90 transition hover:text-[#d4af37]"
-                            >
-                              <span>{item.name}</span>
-                              <HiOutlineChevronRight className="text-[16px] text-[#d4af37] opacity-0 transition group-hover/item:opacity-100" />
-                            </Link>
-                          ))}
-                        </div>
-                      </div>
-                    </div>
-                  )}
-              </div>
-            ))}
+            {renderDesktopNavItems(leftNavLinks, "left")}
           </nav>
 
           <Link
@@ -358,46 +309,7 @@ export default function Navbar() {
           </Link>
 
           <div className="flex min-w-0 items-center justify-end">
-            {navLinks.slice(5).map((link, index) => (
-              <div
-                key={link.name}
-                className="group relative flex min-w-0 items-center"
-                onMouseEnter={() => setActiveDesktopDropdown(link.name)}
-                onMouseLeave={() => setActiveDesktopDropdown(null)}
-              >
-                <Link
-                  href={link.href}
-                  className="relative inline-flex whitespace-nowrap px-3 pb-2 2xl:px-5 font-roboto text-[11px] font-medium tracking-[1.2px] text-white transition-colors duration-300 hover:text-[#d4af37] 2xl:text-[12px]"
-                >
-                  <span>{link.name}</span>
-                  <span className="pointer-events-none absolute bottom-0 left-0 h-[2px] w-full origin-left scale-x-0 bg-[#d4af37] transition-transform duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-x-100" />
-                </Link>
-
-                {index !== navLinks.slice(5).length - 1 && (
-                  <span className="h-9 w-px shrink-0 bg-white/20" />
-                )}
-
-                {link.dropdown?.length > 0 &&
-                  activeDesktopDropdown === link.name && (
-                    <div className="absolute left-0 top-full pt-4">
-                      <div className="inline-block bg-black/95 px-4 py-4 shadow-[0_20px_60px_rgba(0,0,0,0.45)] backdrop-blur-md">
-                        <div className="flex min-w-max flex-col gap-3">
-                          {link.dropdown.map((item) => (
-                            <Link
-                              key={item.name}
-                              href={item.href}
-                              className="group/item flex items-center justify-between gap-5 whitespace-nowrap font-roboto text-[13px] uppercase text-white/90 transition hover:text-[#d4af37]"
-                            >
-                              <span>{item.name}</span>
-                              <HiOutlineChevronRight className="text-[16px] text-[#d4af37] opacity-0 transition group-hover/item:opacity-100" />
-                            </Link>
-                          ))}
-                        </div>
-                      </div>
-                    </div>
-                  )}
-              </div>
-            ))}
+            {renderDesktopNavItems(rightNavLinks, "right")}
 
             <button
               aria-label="Search"
@@ -413,7 +325,7 @@ export default function Navbar() {
 
   const renderMobileNav = (isSticky = false) => (
     <div
-      className={`xl:hidden w-full ${
+      className={`w-full xl:hidden ${
         isSticky ? "bg-black/95 shadow-[0_10px_30px_rgba(0,0,0,0.35)]" : ""
       }`}
     >
@@ -576,7 +488,7 @@ export default function Navbar() {
         className={`fixed left-0 top-0 z-[60] hidden w-full transition-all duration-500 ease-out xl:block ${
           showStickyNavbar
             ? "translate-y-0 opacity-100"
-            : "-translate-y-full opacity-0 pointer-events-none"
+            : "pointer-events-none -translate-y-full opacity-0"
         }`}
       >
         <div className="mx-auto w-full max-w-[1920px]">
@@ -588,7 +500,7 @@ export default function Navbar() {
         className={`fixed left-0 top-0 z-[60] w-full transition-all duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] xl:hidden ${
           showStickyNavbar
             ? "translate-y-0 opacity-100"
-            : "-translate-y-full opacity-0 pointer-events-none"
+            : "pointer-events-none -translate-y-full opacity-0"
         }`}
       >
         <div className="mx-auto w-full max-w-[1920px]">

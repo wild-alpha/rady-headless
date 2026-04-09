@@ -2,7 +2,10 @@ import { fetchGraphQL } from "@/lib/graphql";
 import { notFound } from "next/navigation";
 
 export default async function Page({ params }) {
-  const slug = params.slug ? "/" + params.slug.join("/") + "/" : "/";
+  const resolvedParams = await params;
+  const slug = resolvedParams.slug
+    ? "/" + resolvedParams.slug.join("/") + "/"
+    : "/";
 
   const data = await fetchGraphQL(
     `

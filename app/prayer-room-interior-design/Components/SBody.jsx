@@ -5,10 +5,22 @@ import Link from "next/link";
 import { useState } from "react";
 import { FaPlay } from "react-icons/fa";
 
-const designImages = [
-  "/images/WhatsApp Image 2026-03-03 at 12.30.32 PM copy.jpg",
-  "/images/1 (8).jpg",
-  "/images/2 (8).jpg",
+const serviceCards = [
+  {
+    src: "/images/WhatsApp Image 2026-03-03 at 12.30.32 PM copy.jpg",
+    link: "/prayer-room-interior-design-dubai",
+    title: "Prayer Room Interior Design",
+  },
+  {
+    src: "/images/1 (8).jpg",
+    link: "/home-prayer-room-design-dubai",
+    title: "Home Prayer Room Design",
+  },
+  {
+    src: "/images/2 (8).jpg",
+    link: "/modern-prayer-room-design-dubai",
+    title: "Modern Prayer Room Design",
+  },
 ];
 
 const textImage = {
@@ -96,7 +108,8 @@ const faqs = [
       "The timeline depends on the room size, design scope, and level of customization involved. In most cases, prayer room interior design projects in Dubai can take from a few weeks to a couple of months from concept to final setup.",
   },
   {
-    question: "Can you design both compact prayer rooms and larger dedicated worship spaces?",
+    question:
+      "Can you design both compact prayer rooms and larger dedicated worship spaces?",
     answer:
       "Yes, we design all types of prayer spaces, from compact private prayer corners and home musalla rooms to larger dedicated prayer rooms in villas and residences across Dubai.",
   },
@@ -106,7 +119,8 @@ const faqs = [
       "Yes, we offer complete prayer room interior design support including concept development, space planning, material selection, technical drawings, custom shelving or joinery, and fit-out coordination.",
   },
   {
-    question: "What affects the cost of prayer room interior design in Dubai?",
+    question:
+      "What affects the cost of prayer room interior design in Dubai?",
     answer:
       "The cost depends on the room size, wall finishes, ceiling details, lighting, carpets, shelving, decorative features, custom joinery, and the overall level of customization involved in the project.",
   },
@@ -133,20 +147,14 @@ const SBody = () => {
 
               <p className="text-sm sm:text-base leading-7 mb-4">
                 Are you looking for
-                <a
-                  href="https://radyinterior.ae/"
-                  className=" ml-1"
-                >
+                <a href="https://radyinterior.ae/" className=" ml-1">
                   prayer room interior design services in Dubai <span></span>
                 </a>
                 that combine serenity, elegance, and spiritual comfort. You are
                 at the right place.
                 <br />
                 With 15+ years of experience in residential interior design,
-                <a
-                  href="https://radyinterior.ae/"
-                  className="ml-1"
-                >
+                <a href="https://radyinterior.ae/" className="ml-1">
                   Rady Interior Design & Fit Out, <span></span>
                 </a>
                 creates prayer room interiors that feel calm, refined, and
@@ -156,10 +164,7 @@ const SBody = () => {
                 designed prayer corner within your residence, our team helps shape
                 spaces that feel spiritually uplifting, comfortable, and visually
                 balanced. Keep reading to discover how
-                <a
-                  href="https://radyinterior.ae/"
-                  className="ml-1"
-                >
+                <a href="https://radyinterior.ae/" className="ml-1">
                   Rady Interior Design & Fit Out, <span></span>
                 </a>
                 delivers prayer room interior design solutions in Dubai tailored
@@ -225,16 +230,25 @@ const SBody = () => {
         </h2>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-10">
-          {designImages.map((src, index) => (
-            <div key={index} className="relative aspect-square overflow-hidden">
+          {serviceCards.map((card, index) => (
+            <Link
+              key={index}
+              href={card.link}
+              className="group relative block aspect-square overflow-hidden rounded-lg"
+            >
               <Image
-                src={src}
-                alt={`service ${index + 1}`}
+                src={card.src}
+                alt={card.title}
                 width={600}
                 height={600}
-                className="object-cover w-full h-full"
+                className="object-cover w-full h-full transition-transform duration-300 group-hover:scale-105"
               />
-            </div>
+              <div className="absolute inset-0 bg-black/45 group-hover:bg-black/55 transition duration-300 flex items-center justify-center p-4">
+                <h3 className="text-white text-sm sm:text-base md:text-lg font-semibold text-center uppercase tracking-wider">
+                  {card.title}
+                </h3>
+              </div>
+            </Link>
           ))}
         </div>
 
@@ -283,10 +297,7 @@ const SBody = () => {
           <div className="space-y-4 text-sm sm:text-base font-play text-left">
             <p>
               With years of experience in residential interior design,
-              <a
-                href="https://radyinterior.ae/"
-                className="ml-1"
-              >
+              <a href="https://radyinterior.ae/" className="ml-1">
                 Rady Interior Design & Fit Out <span></span>
               </a>
               helps homeowners in Dubai create prayer room interiors that feel
@@ -307,10 +318,7 @@ const SBody = () => {
 
             <p>
               From compact prayer corners to dedicated home prayer rooms,
-              <a
-                href="https://radyinterior.ae/"
-                className="ml-1"
-              >
+              <a href="https://radyinterior.ae/" className="ml-1">
                 Rady Interior Design & Fit Out <span></span>
               </a>
               creates tailored interiors that combine thoughtful planning, soft
@@ -327,10 +335,7 @@ const SBody = () => {
               <br />
               <br />
               When you choose
-              <a
-                href="https://radyinterior.ae/"
-                className="ml-1"
-              >
+              <a href="https://radyinterior.ae/" className="ml-1">
                 Rady Interior Design & Fit Out, <span></span>
               </a>
               you choose a professional team dedicated to delivering prayer room
@@ -346,10 +351,7 @@ const SBody = () => {
               Our Dubai Prayer Room Design Projects
             </h2>
             <p className="text-sm sm:text-base">
-              <a
-                href="https://radyinterior.ae/"
-                className="ml-1"
-              >
+              <a href="https://radyinterior.ae/" className="ml-1">
                 Rady Interior Design & Fit Out, <span></span>
               </a>
               works on residential interior projects in Dubai, including prayer
@@ -362,10 +364,7 @@ const SBody = () => {
             </p>
             <p className="text-sm sm:text-base">
               Clients trust
-              <a
-                href="https://radyinterior.ae/"
-                className="ml-1"
-              >
+              <a href="https://radyinterior.ae/" className="ml-1">
                 Rady Interior Design & Fit Out <span></span>
               </a>
               to create prayer room interiors that feel peaceful, practical, and
@@ -446,7 +445,6 @@ const SBody = () => {
           </div>
         </div>
 
-       
         <div className="max-w-7xl mx-auto">
           <h2 className="text-center text-3xl font-conthrax py-12 text-[#d4af37]">
             Bespoke Prayer Room Interior Design Dubai, Crafted for Peace and Reflection

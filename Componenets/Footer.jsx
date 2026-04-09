@@ -29,13 +29,13 @@ const importantLinks = [
 ];
 
 const serviceLocations = [
-  { name: "Dubai", href: "/areas-we-serve/dubai" },
-  { name: "Sharjah", href: "/areas-we-serve/sharjah" },
-  { name: "Ajman", href: "/areas-we-serve/interior-design-company-ajman" },
-  { name: "Abu Dhabi", href: "/areas-we-serve/abu-dhabi" },
-  { name: "Umm Al Quwain", href: "/areas-we-serve/interior-design-umm-al-quwain" },
-  { name: "Ras Al Khaimah", href: "/areas-we-serve/interior-design-ras-al-khaimah" },
-  { name: "Fujairah", href: "/areas-we-serve/interior-design-company-fujairah" },
+   { name: "DUBAI", href: "/areas-we-serve?category=dubai" },
+      { name: "SHARJAH", href: "/areas-we-serve?category=sharjah" },
+      { name: "AJMAN", href: "/areas-we-serve?category=ajman" },
+      { name: "UMM AL QUWAIN", href: "/areas-we-serve?category=umm%20al%20quwain" },
+      { name: "RAS AL KHAIMAH", href: "/areas-we-serve?category=ras%20al%20khaimah" },
+      /*{ name: "ABU DHABI", href: "/areas-we-serve?category=abudhabi" },*/
+      { name: "FUJAIRAH", href: "/areas-we-serve?category=fujairah" },
 ];
 
 export default function Footer() {

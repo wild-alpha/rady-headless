@@ -5,10 +5,22 @@ import Link from "next/link";
 import { useState } from "react";
 import { FaPlay } from "react-icons/fa";
 
-const designImages = [
-  "/images/government-projects-interiors.jpg",
-  "/images/public-interior-design-in-dubai.jpg",
-  "/images/govt-projects-interiors.jpg",
+const serviceCards = [
+  {
+    src: "/images/government-projects-interiors.jpg",
+    link: "/public-space-design-dubai",
+    title: "Public Space Design",
+  },
+  {
+    src: "/images/public-interior-design-in-dubai.jpg",
+    link: "/public-space-fit-out-dubai",
+    title: "Public Space Fit Out",
+  },
+  {
+    src: "/images/govt-projects-interiors.jpg",
+    link: "/modern-public-space-design-dubai",
+    title: "Modern Public Space Design",
+  },
 ];
 
 const textImage = {
@@ -48,10 +60,7 @@ const galleryImages = [
     link: "/classic-villa-interior-design",
     title: "CLASSIC VILLA INTERIOR DESIGN",
   },
-
 ];
-
-
 
 const faqs = [
   {
@@ -189,16 +198,25 @@ const SBody = () => {
         </h2>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-10">
-          {designImages.map((src, index) => (
-            <div key={index} className="relative aspect-square overflow-hidden">
+          {serviceCards.map((card, index) => (
+            <Link
+              key={index}
+              href={card.link}
+              className="group relative block aspect-square overflow-hidden rounded-lg"
+            >
               <Image
-                src={src}
-                alt={`service ${index + 1}`}
+                src={card.src}
+                alt={card.title}
                 width={600}
                 height={600}
-                className="object-cover w-full h-full"
+                className="object-cover w-full h-full transition-transform duration-300 group-hover:scale-105"
               />
-            </div>
+              <div className="absolute inset-0 bg-black/45 group-hover:bg-black/55 transition duration-300 flex items-center justify-center p-4">
+                <h3 className="text-white text-sm sm:text-base md:text-lg font-semibold text-center uppercase tracking-wider">
+                  {card.title}
+                </h3>
+              </div>
+            </Link>
           ))}
         </div>
 
@@ -364,9 +382,10 @@ const SBody = () => {
             </a>
           </div>
         </div>
-             <h2 className="text-center text-xs sm:text-xl md:text-xl font-bold tracking-widest mb-6 uppercase text-[#d4af37]">
-              OUR PUBLIC DESIGN PROJECTS IN DUBAI
-            </h2>
+
+        <h2 className="text-center text-xs sm:text-xl md:text-xl font-bold tracking-widest mb-6 uppercase text-[#d4af37]">
+          OUR PUBLIC DESIGN PROJECTS IN DUBAI
+        </h2>
         <div className="lg:max-w-[60%] grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 max-w-6xl mx-auto mb-10">
           {galleryImages.map(({ src, link, title }, i) => (
             <a
@@ -416,8 +435,6 @@ const SBody = () => {
             </a>
           </div>
         </div>
-
-       
 
         <div className="max-w-7xl mx-auto">
           <h2 className="text-center text-3xl font-conthrax py-12 text-[#d4af37]">

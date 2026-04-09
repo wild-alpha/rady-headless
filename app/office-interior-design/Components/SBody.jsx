@@ -5,10 +5,22 @@ import Link from "next/link";
 import { useState } from "react";
 import { FaPlay } from "react-icons/fa";
 
-const designImages = [
-  "/images/office-working-desk-dubai.jpg",
-  "/images/reception-interior-office.jpg",
-  "/images/shajrah-american-interionational-office.jpg",
+const serviceCards = [
+  {
+    src: "/images/office-working-desk-dubai.jpg",
+    link: "/office-interior-design-dubai",
+    title: "Office Interior Design",
+  },
+  {
+    src: "/images/reception-interior-office.jpg",
+    link: "/office-fit-out-dubai",
+    title: "Office Fit Out Dubai",
+  },
+  {
+    src: "/images/shajrah-american-interionational-office.jpg",
+    link: "/modern-office-design-dubai",
+    title: "Modern Office Design",
+  },
 ];
 
 const textImage = {
@@ -48,9 +60,7 @@ const galleryImages = [
     link: "/classic-villa-interior-design",
     title: "CLASSIC VILLA INTERIOR DESIGN",
   },
-
 ];
-
 
 const faqs = [
   {
@@ -91,25 +101,19 @@ const SBody = () => {
           <div className="flex flex-col lg:flex-row gap-12">
             <div className="w-full lg:w-1/2 flex flex-col justify-start">
               <h2 className="text-sm sm:text-xl md:text-xl font-bold tracking-widest py-2 text-[#d4af37]">
-             office interior design services
+                office interior design services
               </h2>
 
               <p className="text-sm sm:text-base leading-7 mb-4">
                 Are you looking for
-                <a
-                  href="https://radyinterior.ae/"
-                  className=" ml-1"
-                >
+                <a href="https://radyinterior.ae/" className=" ml-1">
                   office interior design services in Dubai <span></span>
                 </a>
                 that combine professionalism, functionality, and a strong brand
                 presence. You are at the right place.
                 <br />
                 With 15+ years of experience in commercial interior design,
-                <a
-                  href="https://radyinterior.ae/"
-                  className="ml-1"
-                >
+                <a href="https://radyinterior.ae/" className="ml-1">
                   Rady Interior Design & Fit Out, <span></span>
                 </a>
                 creates office interiors that feel efficient, stylish, and tailored
@@ -119,10 +123,7 @@ const SBody = () => {
                 create a more refined environment for staff and clients, our team
                 helps shape office spaces that feel practical, polished, and ready
                 for growth. Keep reading to discover how
-                <a
-                  href="https://radyinterior.ae/"
-                  className="ml-1"
-                >
+                <a href="https://radyinterior.ae/" className="ml-1">
                   Rady Interior Design & Fit Out, <span></span>
                 </a>
                 delivers office interior design solutions in Dubai tailored to
@@ -159,15 +160,15 @@ const SBody = () => {
                 </div>
               ) : (
                 <div className="w-full aspect-video border-4 border-[#8c6b1f] rounded-lg overflow-hidden">
-  <iframe
-    className="w-full h-full"
-    src="https://www.youtube.com/embed/gxgwwTlKx18"
-    title="YouTube Video"
-    frameBorder="0"
-    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-    allowFullScreen
-  ></iframe>
-</div>
+                  <iframe
+                    className="w-full h-full"
+                    src="https://www.youtube.com/embed/gxgwwTlKx18"
+                    title="YouTube Video"
+                    frameBorder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowFullScreen
+                  ></iframe>
+                </div>
               )}
 
               <Link
@@ -188,16 +189,25 @@ const SBody = () => {
         </h2>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-10">
-          {designImages.map((src, index) => (
-            <div key={index} className="relative aspect-square overflow-hidden">
+          {serviceCards.map((card, index) => (
+            <Link
+              key={index}
+              href={card.link}
+              className="group relative block aspect-square overflow-hidden rounded-lg"
+            >
               <Image
-                src={src}
-                alt={`service ${index + 1}`}
+                src={card.src}
+                alt={card.title}
                 width={600}
                 height={600}
-                className="object-cover w-full h-full"
+                className="object-cover w-full h-full transition-transform duration-300 group-hover:scale-105"
               />
-            </div>
+              <div className="absolute inset-0 bg-black/45 group-hover:bg-black/55 transition duration-300 flex items-center justify-center p-4">
+                <h3 className="text-white text-sm sm:text-base md:text-lg font-semibold text-center uppercase tracking-wider">
+                  {card.title}
+                </h3>
+              </div>
+            </Link>
           ))}
         </div>
 
@@ -246,10 +256,7 @@ const SBody = () => {
           <div className="space-y-4 text-sm sm:text-base font-play text-left">
             <p>
               With years of experience in commercial interior design,
-              <a
-                href="https://radyinterior.ae/"
-                className="ml-1"
-              >
+              <a href="https://radyinterior.ae/" className="ml-1">
                 Rady Interior Design & Fit Out <span></span>
               </a>
               helps businesses in Dubai create office interiors that feel
@@ -271,10 +278,7 @@ const SBody = () => {
             <p>
               From reception areas and executive cabins to workstations, meeting
               rooms, collaborative spaces, and storage zones,
-              <a
-                href="https://radyinterior.ae/"
-                className="ml-1"
-              >
+              <a href="https://radyinterior.ae/" className="ml-1">
                 Rady Interior Design & Fit Out <span></span>
               </a>
               creates tailored office interiors that combine smart planning,
@@ -293,10 +297,7 @@ const SBody = () => {
               <br />
               <br />
               When you choose
-              <a
-                href="https://radyinterior.ae/"
-                className="ml-1"
-              >
+              <a href="https://radyinterior.ae/" className="ml-1">
                 Rady Interior Design & Fit Out, <span></span>
               </a>
               you choose a professional team dedicated to delivering office
@@ -312,10 +313,7 @@ const SBody = () => {
               Our Dubai Office Interior Design Projects
             </h2>
             <p className="text-sm sm:text-base">
-              <a
-                href="https://radyinterior.ae/"
-                className="ml-1"
-              >
+              <a href="https://radyinterior.ae/" className="ml-1">
                 Rady Interior Design & Fit Out, <span></span>
               </a>
               works on commercial interior projects in Dubai, including office
@@ -329,16 +327,12 @@ const SBody = () => {
             </p>
             <p className="text-sm sm:text-base">
               Clients trust
-              <a
-                href="https://radyinterior.ae/"
-                className="ml-1"
-              >
+              <a href="https://radyinterior.ae/" className="ml-1">
                 Rady Interior Design & Fit Out <span></span>
               </a>
               to create office interiors that feel professional, practical, and
               visually refined while supporting the real needs of the business.
             </p>
-            
           </div>
 
           <div className="w-full lg:w-1/3 group relative overflow-hidden rounded-lg shadow-lg">
@@ -358,8 +352,10 @@ const SBody = () => {
             </a>
           </div>
         </div>
-            <h2 className="text-center text-xs sm:text-xl md:text-xl font-bold tracking-widest mb-6 uppercase text-[#d4af37]">
-      OUR OFFICE INTERIOR DESIGN PROJECTS IN DUBAI</h2>
+
+        <h2 className="text-center text-xs sm:text-xl md:text-xl font-bold tracking-widest mb-6 uppercase text-[#d4af37]">
+          OUR OFFICE INTERIOR DESIGN PROJECTS IN DUBAI
+        </h2>
         <div className="lg:max-w-[60%] grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 max-w-6xl mx-auto mb-10">
           {galleryImages.map(({ src, link, title }, i) => (
             <a
@@ -409,8 +405,6 @@ const SBody = () => {
             </a>
           </div>
         </div>
-
-       
 
         <div className="max-w-7xl mx-auto">
           <h2 className="text-center text-3xl font-conthrax py-12 text-[#d4af37]">

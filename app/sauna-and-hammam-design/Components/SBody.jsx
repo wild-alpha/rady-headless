@@ -5,10 +5,22 @@ import Link from "next/link";
 import { useState } from "react";
 import { FaPlay } from "react-icons/fa";
 
-const designImages = [
-  "/images/vservice1.webp",
-  "/images/vservice2.webp",
-  "/images/vservice3.webp",
+const serviceCards = [
+  {
+    src: "/images/vservice1.webp",
+    link: "/sauna-design-dubai",
+    title: "Sauna Design Dubai",
+  },
+  {
+    src: "/images/vservice2.webp",
+    link: "/hammam-design-dubai",
+    title: "Hammam Design Dubai",
+  },
+  {
+    src: "/images/vservice3.webp",
+    link: "/luxury-sauna-hammam-design-dubai",
+    title: "Luxury Sauna & Hammam Design",
+  },
 ];
 
 const textImage = {
@@ -213,16 +225,25 @@ const SBody = () => {
         </h2>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-10">
-          {designImages.map((src, index) => (
-            <div key={index} className="relative aspect-square overflow-hidden">
+          {serviceCards.map((card, index) => (
+            <Link
+              key={index}
+              href={card.link}
+              className="group relative block aspect-square overflow-hidden rounded-lg"
+            >
               <Image
-                src={src}
-                alt={`service ${index + 1}`}
+                src={card.src}
+                alt={card.title}
                 width={600}
                 height={600}
-                className="object-cover w-full h-full"
+                className="object-cover w-full h-full transition-transform duration-300 group-hover:scale-105"
               />
-            </div>
+              <div className="absolute inset-0 bg-black/45 group-hover:bg-black/55 transition duration-300 flex items-center justify-center p-4">
+                <h3 className="text-white text-sm sm:text-base md:text-lg font-semibold text-center uppercase tracking-wider">
+                  {card.title}
+                </h3>
+              </div>
+            </Link>
           ))}
         </div>
 
